@@ -1,6 +1,6 @@
 ### Tóth Levente Bálint, Pácz Barnabás, Prukner András
 
-##Projekt:
+## Projekt:
 
 A projektünk egy autóbérlési és versenypálya-kezelési rendszer, amelynek célja, hogy felhasználóbarát weboldalt és asztali alkalmazást biztosítson a felhasználók számára. A projekt két fő komponensből áll:
 
@@ -18,6 +18,7 @@ Mindkét rendszer egy közös REST API-t használ, amely az adatokat egy közpon
 * Versenypálya foglalás
 * Autók bérlése
 * Webes felület az autók és pálya kezelésére
+
 ## MAUI Asztali Alkalmazás:
 
 ### Funkciók:
@@ -26,6 +27,7 @@ Mindkét rendszer egy közös REST API-t használ, amely az adatokat egy közpon
 * Versenypálya foglalás
 * Autók bérlése
 * Asztali felület az autók és pálya kezelésére
+
 ## REST API:
 
 ## Laravel alapú API
@@ -37,18 +39,18 @@ Mindkét rendszer egy közös REST API-t használ, amely az adatokat egy közpon
 * Foglalások kezelése
 * Adatok szűrése és keresése
 * Adatbázis struktúra:
-
 * Felhasználók (regisztrált ügyfelek és adminok)
 * Autók (elérhető bérleti járművek)
 * Versenypályák (foglalható helyszínek)
 * Foglalások (felhasználói és adminisztratív tranzakciók)
 * Jövőbeli Bővítési Lehetőségek:
-
 * Mobilalkalmazás fejlesztése Androidra és iOS-re
 * Támogatás többnyelvű kezelőfelülethez
 
 #### Githgub Letrehozasa
-* Github link: https://github.com/LeventeTooth/Project.git
-#### SQL tervezés
-* az adatbázis megtervezése
 
+* Github link: https://github.com/LeventeTooth/Project.git
+
+#### SQL tervezés
+
+* az adatbázis megtervezése
