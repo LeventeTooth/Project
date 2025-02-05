@@ -1,4 +1,4 @@
-### Tóth Levente Bálint, Pácz Barnabás, Prukner András
+# Tóth Levente Bálint, Pácz Barnabás, Prukner András
 
 ## Projekt:
 
