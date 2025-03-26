@@ -3,34 +3,20 @@
 @section('title', 'WelcomePage')
 
 @section('content')
-    <style>
-        .item {
-            padding: 30px;
-            text-align: center;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.45);
-        }
 
-        #card {
-            border: solid white 3px;
-            border-radius: 20px;
-            padding: 10px;
-        }
-    </style>
     <div class="item">
-        <h3>Kovetkezo esemeny:</h3>
-        <h1>Kralka Szezonindito: 04.20</h1>
+        <h3 class="text-3xl">Kovetkezo esemeny:</h3>
+        <h1 class="text-5xl">Kralka Szezonindito: 04.05</h1>
     </div>
 
-    <div class="item" style="margin-top: 300px; padding: 0px;">
-        <a style="font-size: 100px;">Jegyek</a>
+    <div class="item">
+        <a class="text-5xl">Jegyek</a>
     </div>
 
-    <div class="item" style="margin-top: 300px;">
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col-10" id="card">
-                <h1>A PÁLYÁRÓL:</h1>
+    <div class="item">
+        <div class="card">
+        <div class="p-20 pt-10 pb-10">
+                <h1 class="text-3xl">A PÁLYÁRÓL:</h1>
                 <br>
                 <p style="font-size: large;">A BSSW pályát főként alacsony teljesítményű motorok, szupermotók és gokartok számára terveztek. A pálya
                     teljes hossza 1130 méter, és 12 kanyar található rajta, amelyek kihívást jelentenek minden szintű
@@ -91,7 +77,6 @@
 
                     https://youtu.be/N9kfzBwk2oE?si=C88u6N3g2EjjwlQC</p>
             </div>
-            <div class="col-1"></div>
         </div>
     </div>
 @endsection
