@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('rents', function (Blueprint $table) {
             $table->id();
-            $table->string("user_id");
-            $table->string("track_id");
-            $table->string("car_id");
+            $table->foreignId("user_id")->constrained("users", "id");
+            $table->foreignId("track_id")->constrained("tracks", "id");
+            $table->foreignId("car_id")->constrained("cars", "id");
             $table->timestamps();
             $table->softDeletes();
         });

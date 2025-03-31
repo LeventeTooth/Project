@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('address');
             $table->date('birth_date');
             $table->integer('age');
-            $table->integer('group_id');
+            $table->foreignId('group_id')->constrained("groups","id");
             $table->rememberToken();
             $table->timestamps();
         });
