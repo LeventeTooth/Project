@@ -30,7 +30,7 @@
                 <div class="text-center mt-4">
                     <div class="hidden md:block">
                         <div class="flex justify-center space-x-6">
-                            <a href="#" class="text-white text-xl px-4">Főoldal</a>
+                            <a href="{{route("welcome")}}" class="text-white text-xl px-4">Főoldal</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
                             <a href="#" class="text-white text-xl px-4">Beruházók</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
