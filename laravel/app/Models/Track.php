@@ -9,4 +9,6 @@ class Track extends Model
 {
     /** @use HasFactory<\Database\Factories\TrackFactory> */
     use HasFactory;
+    use SoftDeletes;
+
 }

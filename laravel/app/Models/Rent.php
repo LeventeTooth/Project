@@ -9,4 +9,6 @@ class Rent extends Model
 {
     /** @use HasFactory<\Database\Factories\RentFactory> */
     use HasFactory;
+    use SoftDeletes;
+
 }
