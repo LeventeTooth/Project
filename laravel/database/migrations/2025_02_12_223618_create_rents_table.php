@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string("track_id");
             $table->string("car_id");
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
