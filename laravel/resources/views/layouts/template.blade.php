@@ -21,8 +21,12 @@
                     <div class="col-span-4 text-white" id="followUs">
                         <h1 class="text-xl">Kövess minket itt is</h1>
                         <div class="flex space-x-4">
-                            <img src="{{ asset('images/insta.png') }}" alt="Instagram" class="h-12 w-12">
-                            <img src="{{ asset('images/facebook.png') }}" alt="Facebook" class="h-12 w-12">
+                            <a href="https://www.instagram.com/kralkagarage/" target="_blank">
+                                <img src="{{ asset('images/insta.png') }}" alt="Instagram" class="h-12 w-12">
+                            </a>
+                            <a href="https://www.facebook.com/groups/979211093620968" target="_blank">
+                                <img src="{{ asset('images/facebook.png') }}" alt="Facebook" class="h-12 w-12">
+                            </a>
                         </div>
                     </div>
                     <div class="col-span-1"></div>
@@ -30,32 +34,32 @@
                 <div class="text-center mt-4">
                     <div class="hidden md:block">
                         <div class="flex justify-center space-x-6">
-                            <a href="{{route("welcome")}}" class="text-white text-xl px-4">Főoldal</a>
+                            <a href="{{route('main')}}" class="text-white text-xl px-4">Főoldal</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
-                            <a href="#" class="text-white text-xl px-4">Beruházók</a>
+                            <a href="{{route('track')}}" class="text-white text-xl px-4">Pálya</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
-                            <a href="#" class="text-white text-xl px-4">Pálya</a>
+                            <a href="{{route('events')}}" class="text-white text-xl px-4">Események</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
-                            <a href="#" class="text-white text-xl px-4">Események</a>
+                            <a href="{{route('calendar')}}" class="text-white text-xl px-4">Naptár</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
-                            <a href="#" class="text-white text-xl px-4">Naptár</a>
+                            <a href="{{route('prices')}}" class="text-white text-xl px-4">Árak</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
-                            <a href="#" class="text-white text-xl px-4">Árak</a>
+                            <a href="{{route('pictures')}}" class="text-white text-xl px-4">Képek</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
-                            <a href="#" class="text-white text-xl px-4">Képek</a>
+                            <a href="{{route('register')}}" class="text-white text-xl px-4">Regisztracio/Belepes</a>
                         </div>
                     </div>
                     <div class="md:hidden">
                         <button id="menu-button" class="text-white text-3xl">☰</button>
                         <div id="mobile-menu" class="hidden">
                             <div class="space-y-4 mt-4">
-                                <a href="#" class="text-white text-lg block">Főoldal</a>
-                                <a href="#" class="text-white text-lg block">Beruházók</a>
-                                <a href="#" class="text-white text-lg block">Pálya</a>
-                                <a href="#" class="text-white text-lg block">Események</a>
-                                <a href="#" class="text-white text-lg block">Naptár</a>
-                                <a href="#" class="text-white text-lg block">Árak</a>
-                                <a href="#" class="text-white text-lg block">Képek</a>
+                                <a href="{{route('main')}}" class="text-white text-lg block">Főoldal</a>
+                                <a href="{{route('track')}}" class="text-white text-lg block">Pálya</a>
+                                <a href="{{route('events')}}" class="text-white text-lg block">Események</a>
+                                <a href="{{route('calendar')}}" class="text-white text-lg block">Naptár</a>
+                                <a href="{{route('prices')}}" class="text-white text-lg block">Árak</a>
+                                <a href="{{route('pictures')}}" class="text-white text-lg block">Képek</a>
+                                <a href="{{route('register')}}" class="text-white text-lg block">Regisztracio/Belepes</a>
                             </div>
                         </div>
                     </div>
