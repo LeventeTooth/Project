@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-04-15T08:01:11.061</Modified>
+      <Modified>2025-04-15T12:08:59.342</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-04-15T08:01:10.863</Modified>
+      <Modified>2025-04-15T12:03:08.875</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Project.runtimeconfig.json">
       <PackagePath>Project.runtimeconfig.json</PackagePath>
-      <Modified>2025-04-15T08:01:10.505</Modified>
+      <Modified>2025-04-15T12:03:08.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Project.dll">
       <PackagePath>Project.dll</PackagePath>
-      <Modified>2025-04-15T08:01:09.383</Modified>
+      <Modified>2025-04-15T12:08:58.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Project.exe</PackagePath>
-      <Modified>2025-04-15T08:01:09.399</Modified>
+      <Modified>2025-04-15T12:08:58.959</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -287,7 +287,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Project.deps.json">
       <PackagePath>Project.deps.json</PackagePath>
-      <Modified>2025-04-15T08:01:10.362</Modified>
+      <Modified>2025-04-15T12:03:08.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
@@ -296,6 +296,10 @@
     <AppxPackagedFile Include="C:\Users\kispr\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2024-11-11T17:23:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kispr\.nuget\packages\communitytoolkit.mvvm\8.4.0\lib\net8.0-windows10.0.17763\CommunityToolkit.Mvvm.dll">
+      <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
+      <Modified>2024-12-12T07:54:40.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\.nuget\packages\microsoft.extensions.configuration\8.0.0\lib\net8.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>

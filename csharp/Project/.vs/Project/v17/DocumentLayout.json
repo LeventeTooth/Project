@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\model\\apihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\model\\apihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,41 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ApiHandler.cs",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Model\\ApiHandler.cs",
-              "RelativeDocumentMoniker": "Project\\Model\\ApiHandler.cs",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Model\\ApiHandler.cs",
-              "RelativeToolTip": "Project\\Model\\ApiHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T08:13:18.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "Project\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml.cs",
-              "RelativeToolTip": "Project\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T08:11:56.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml",
               "RelativeDocumentMoniker": "Project\\MainPage.xaml",
               "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml",
               "RelativeToolTip": "Project\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-15T08:00:57.196Z",
+              "WhenOpened": "2025-04-15T12:10:29.313Z",
               "EditorCaption": ""
             }
           ]

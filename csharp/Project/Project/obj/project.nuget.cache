@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1v4oPkvBEYE=",
+  "dgSpecHash": "NrUbNRoHDqk=",
   "success": true,
   "projectFilePath": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Project.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kispr\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\kispr\\.nuget\\packages\\googlegson\\2.10.1.4\\googlegson.2.10.1.4.nupkg.sha512",
     "C:\\Users\\kispr\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\kispr\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
