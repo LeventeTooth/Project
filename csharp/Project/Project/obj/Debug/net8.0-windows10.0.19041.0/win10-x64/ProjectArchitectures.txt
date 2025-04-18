@@ -1,1 +1,1 @@
-C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\Project.csproj;x64
+C:\Users\LeviPc\Desktop\Project\csharp\Project\Project\Project.csproj;x64

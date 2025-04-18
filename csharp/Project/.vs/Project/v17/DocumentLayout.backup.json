@@ -1,22 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\",
+  "WorkspaceRootPath": "C:\\Users\\LeviPc\\Desktop\\Project\\csharp\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\model\\apihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\model\\apihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\controller\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\controller\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\levipc\\desktop\\project\\csharp\\project\\project\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,66 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainController.cs",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\MainController.cs",
-              "RelativeDocumentMoniker": "Project\\Controller\\MainController.cs",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\MainController.cs",
-              "RelativeToolTip": "Project\\Controller\\MainController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T11:59:32.218Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ApiHandler.cs",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Model\\ApiHandler.cs",
-              "RelativeDocumentMoniker": "Project\\Model\\ApiHandler.cs",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Model\\ApiHandler.cs",
-              "RelativeToolTip": "Project\\Model\\ApiHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T08:13:18.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "Project\\MainPage.xaml.cs",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml.cs",
-              "RelativeToolTip": "Project\\MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T08:11:56.356Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\LeviPc\\Desktop\\Project\\csharp\\Project\\Project\\MainPage.xaml",
               "RelativeDocumentMoniker": "Project\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\LeviPc\\Desktop\\Project\\csharp\\Project\\Project\\MainPage.xaml",
               "RelativeToolTip": "Project\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-15T08:00:57.196Z",
+              "WhenOpened": "2025-04-15T12:10:29.313Z",
               "EditorCaption": ""
             }
           ]
