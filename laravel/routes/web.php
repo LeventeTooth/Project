@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use App\Http\Controllers\TrackController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +18,7 @@ Route::get('/calendar', function () {
     return view('calendar');
 })->name("calendar");
 
-Route::get('/prices', function () {
-    return view('prices');
-})->name("prices");
+Route::resource('/cars', CarController::class);
 
 Route::get('/pictures', function () {
     return view('pictures');

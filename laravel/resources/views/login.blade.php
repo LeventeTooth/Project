@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'WelcomePage')
+@section('title', 'Belepes')
 
 @section('content')
 

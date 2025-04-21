@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'WelcomePage')
+@section('title', 'Fooldal')
 
 @section('content')
 
@@ -10,73 +10,46 @@
     </div>
 
     <div class="item">
-        <a class="text-5xl">Jegyek</a>
+        <a class="text-5xl">Jegyek: 6000Ft/auto</a>
     </div>
 
-    <div class="item">
-        <div class="card">
-        <div class="p-20 pt-10 pb-10">
-                <h1 class="text-3xl">A PÁLYÁRÓL:</h1>
-                <br>
-                <p style="font-size: large;">A BSSW pályát főként alacsony teljesítményű motorok, szupermotók és gokartok számára terveztek. A pálya
-                    teljes hossza 1130 méter, és 12 kanyar található rajta, amelyek kihívást jelentenek minden szintű
-                    versenyző számára. Egyedi kialakítása miatt hat különböző pályavariáció elérhető a jól megtervezett
-                    átkötő szakaszoknak köszönhetően.
+    <div class="hidden md:block">
+        <div class="item">
+            <div class="card">
+                <div class="p-20 pt-10 pb-10">
+                    <h1 class="text-3xl">A PÁLYÁRÓL:</h1>
+                    <br>
+                    <p style="font-size: large;">
+                    A Králkai Drift Pálya egy sokoldalúan kialakított drift- és szórakoztató motorsport-komplexum, amely ideális választás mind a kezdő, mind a tapasztalt pilóták számára. A pálya vonalvezetése különféle kihívásokat rejt: technikás kanyarok, lendületes ívek és széles manőverezési lehetőségek biztosítják az élményt.
 
+A pályán több, hivatalosan kijelölt drift szakasz található, ahol legálisan és biztonságosan lehet gyakorolni a különböző drift technikákat. Ezek a részek kifejezetten úgy kerültek kialakításra, hogy lehetőséget adjanak mind a tanulásra, mind a látványos autókezelés bemutatására.
 
-                    2024-ben a versenypálya új aszfaltburkolatot kapott, amely jelentősen javította a tapadást és a pálya
-                    minőségét. FIM által jóváhagyott, Misano stílusú rázókövek és beton szélesítések is kialakításra
-                    kerültek, amelyek biztonságos és élvezetes keretet adtak a pályának.
+A biztonság érdekében bizonyos szakaszokon driftelni tilos. Ezeket kizárólag közlekedési célokra lehet használni, például visszafordulásra vagy áthaladásra. A szabályok betartása elengedhetetlen a zavartalan működés és a balesetek elkerülése érdekében.
 
+A pályához egy külön off-road szakasz is tartozik, amely természetes, földes terepen vezet keresztül. Ez a rész ideális azoknak, akik a csúszós, változatos felületű környezetet kedvelik, és szeretnék fejleszteni járműkezelési tudásukat terepen is.
 
-                    A BSSW pálya sokoldalúsága abban rejlik, hogy mindkét irányban használható, így még több lehetőséget
-                    kínál a versenyzőknek és rendezvényszervezőknek egyaránt. A biztonság elsődleges szempont, a pálya
-                    minimális szélessége 8 méter, amely bőséges helyet biztosít a manőverezéshez. A célegyenes 12 méter
-                    széles, ami lehetővé teszi az előzéseket és a nagy sebességű akciókat.
-
-
-                    A pálya világítással is fel van szerelve, ami alkalmassá teszi az éjszakai használatra, így akár
-                    sötétedés utáni események (endurance versenyek) is tarthatók.
-
-
-                    A fő versenypályán kívül a szomszédos területen egy külön cross pálya is található, amely további
-                    változatosságot kínál a motorsport rajongóknak. Ez lehetővé teszi, hogy egy teljes napot töltsenek
-                    versenyzéssel, kielégítve mind a gyorsasági, mind az off-road kedvelőit.
-
-
-                    Bérelhető bokszokat kínálunk a vendégeink számára. A pálya reggel 9-től délután 5-ig tart nyitva, de
-                    egyedi edzésidőpontok is igényelhetők előzetes egyeztetéssel. 30 gokart áll rendelkezésre, így kezdők és
-                    tapasztalt vezetők számára egyaránt biztosított a gyakorlási lehetőség.
-
-
-                    A pálya nyitvatartása alatt büfénk változatos ételkínálattal várja vendégeinket, beleértve a meleg
-                    ételeket is, hogy mindenki kellően feltöltődhessen a nap folyamán. Emellett helyszíni gumiműhely is
-                    működik, amely biztosítja a résztvevők járműveinek gyors és kényelmes gumicseréjét.
-
-
-                    A helyszínen METZELER supermoto gumiabroncsok vásárolhatók, első és hátsó kerekekhez, minden keverékben,
-                    versenyképes áron.
-
-
-                    Teljesen versenykész transzponderes időmérő rendszerünk van, amely a pályát három szakaszra osztja, így
-                    a részletes köridőmérés biztosított.. A transzponderek bérelhetők, ami kényelmes és költséghatékony
-                    lehetőséget kínál a résztvevőknek teljesítményük nyomon követésére az edzések alatt.
-
-                    A paddock elegendő számú elektromos csatlakozással rendelkezik a gumimelegítők számára, biztosítva, hogy
-                    minden résztvevő hozzáférjen a szükséges energiaellátáshoz, hogy megfelelően felkészíthesse abroncsait a
-                    versenyek előtt.
-
-
-                    Több, zuhanyzóval ellátott mellékhelyiség áll rendelkezésre, hogy a pilóták felfrissülhessenek a nap
-                    végén.
-
-
-                    Néhány fedélzeti videó a pályáról:
-
-                    https://youtu.be/x-h__W8Aiq4?feature=shared
-
-                    https://youtu.be/N9kfzBwk2oE?si=C88u6N3g2EjjwlQC</p>
+A helyszínhez rendezvényszervezők és látogatók számára kialakított külön területek és kényelmes parkolási lehetőségek is tartoznak. A Králkai pálya célja, hogy egy barátságos, élményközpontú környezetet biztosítson minden motorsport iránt érdeklődő számára – akár edzésről, akár találkozóról vagy versenyről van szó.
+                    </p>
+                </div>
             </div>
+        </div>
+    </div>
+    <!-- tablet, telefon navbar -->
+    <div class="md:hidden">
+        <div class="item">
+            <h1 class="text-3xl">A PÁLYÁRÓL:</h1>
+            <br>
+            <p style="font-size: samll;">
+            A Králkai Drift Pálya egy sokoldalúan kialakított drift- és szórakoztató motorsport-komplexum, amely ideális választás mind a kezdő, mind a tapasztalt pilóták számára. A pálya vonalvezetése különféle kihívásokat rejt: technikás kanyarok, lendületes ívek és széles manőverezési lehetőségek biztosítják az élményt.
+
+A pályán több, hivatalosan kijelölt drift szakasz található, ahol legálisan és biztonságosan lehet gyakorolni a különböző drift technikákat. Ezek a részek kifejezetten úgy kerültek kialakításra, hogy lehetőséget adjanak mind a tanulásra, mind a látványos autókezelés bemutatására.
+
+A biztonság érdekében bizonyos szakaszokon driftelni tilos. Ezeket kizárólag közlekedési célokra lehet használni, például visszafordulásra vagy áthaladásra. A szabályok betartása elengedhetetlen a zavartalan működés és a balesetek elkerülése érdekében.
+
+A pályához egy külön off-road szakasz is tartozik, amely természetes, földes terepen vezet keresztül. Ez a rész ideális azoknak, akik a csúszós, változatos felületű környezetet kedvelik, és szeretnék fejleszteni járműkezelési tudásukat terepen is.
+
+A helyszínhez rendezvényszervezők és látogatók számára kialakított külön területek és kényelmes parkolási lehetőségek is tartoznak. A Králkai pálya célja, hogy egy barátságos, élményközpontú környezetet biztosítson minden motorsport iránt érdeklődő számára – akár edzésről, akár találkozóról vagy versenyről van szó.
+            </p>
         </div>
     </div>
 @endsection
