@@ -1,14 +1,13 @@
 <?php
 
+use App\Http\Controllers\TrackController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('main');
 })->name("main");
 
-Route::get('/track', function () {
-    return view('track');
-})->name("track");
+
 
 Route::get('/events', function () {
     return view('events');
@@ -26,7 +25,7 @@ Route::get('/pictures', function () {
     return view('pictures');
 })->name("pictures");
 
+Route::resource('/tracks', TrackController::class);
 
-Auth::routes();
 
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'index'])->name('register');

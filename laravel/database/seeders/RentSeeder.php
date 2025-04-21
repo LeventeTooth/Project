@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Rent;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,10 @@ class RentSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Rent::create([
+            'user_id'=>1,
+            'track_id'=>1,
+            'car_id'=>1
+        ]);
     }
 }

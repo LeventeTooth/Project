@@ -36,7 +36,7 @@
                         <div class="flex justify-center space-x-6">
                             <a href="{{route('main')}}" class="text-white text-xl px-4">Főoldal</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
-                            <a href="{{route('track')}}" class="text-white text-xl px-4">Pálya</a>
+                            <a href="{{route('tracks.index')}}" class="text-white text-xl px-4">Pálya</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
                             <a href="{{route('events')}}" class="text-white text-xl px-4">Események</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
@@ -54,7 +54,7 @@
                         <div id="mobile-menu" class="hidden">
                             <div class="space-y-4 mt-4">
                                 <a href="{{route('main')}}" class="text-white text-lg block">Főoldal</a>
-                                <a href="{{route('track')}}" class="text-white text-lg block">Pálya</a>
+                                <a href="{{route('tracks.index')}}" class="text-white text-lg block">Pálya</a>
                                 <a href="{{route('events')}}" class="text-white text-lg block">Események</a>
                                 <a href="{{route('calendar')}}" class="text-white text-lg block">Naptár</a>
                                 <a href="{{route('prices')}}" class="text-white text-lg block">Árak</a>

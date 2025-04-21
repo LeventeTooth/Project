@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("license_plate")->unique();
             $table->string("model");
             $table->integer("price");
-            $table->integer("power");
+            $table->string("power");
             $table->timestamps();
             $table->softDeletes();
 
