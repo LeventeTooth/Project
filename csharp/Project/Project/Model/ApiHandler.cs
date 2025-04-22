@@ -21,19 +21,19 @@ namespace Project.Model
             httpClient.BaseAddress = new Uri(Url);
         }
 
-        public async Task<List<string>> Get() => //TODO: the model of the correct class will replace string
-            await httpClient.GetFromJsonAsync<List<string>>("/api/"); //TODO: write the correct path- to api
+        public async Task<List<string>> Get() => 
+            await httpClient.GetFromJsonAsync<List<string>>("/api/"); 
 
-        public async Task<List<string>> GetById(int id) => //TODO: the model of the correct class will replace string
-            await httpClient.GetFromJsonAsync<List<string>>($"/api/{id}"); //TODO: write the correct path- to api
+        public async Task<List<string>> GetById(int id) => 
+            await httpClient.GetFromJsonAsync<List<string>>($"/api/{id}"); 
 
-        public async Task Post(string New) => //TODO: the model of the correct class will replace string
-            await httpClient.PostAsJsonAsync("/api/", New); //TODO: write the correct path- to api
+        public async Task Post(string New) => 
+            await httpClient.PostAsJsonAsync("/api/", New); 
 
-        public async Task Put(string Modified) => //TODO: the model of the correct class will replace string
-            await httpClient.PutAsJsonAsync("/api/", Modified); //TODO: write the correct path- to api
+        public async Task Put(string Modified) => 
+            await httpClient.PutAsJsonAsync("/api/", Modified); 
 
-        public async Task Delete(int id) => //TODO: the model of the correct class will replace string
-            await httpClient.DeleteAsync($"/api/{id}"); //TODO: write the correct path- to api
+        public async Task Delete(int id) => 
+            await httpClient.DeleteAsync($"/api/{id}"); 
     }   
 }

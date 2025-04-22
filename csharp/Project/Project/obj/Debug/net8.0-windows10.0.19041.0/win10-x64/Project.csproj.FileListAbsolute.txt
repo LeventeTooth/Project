@@ -360,3 +360,7 @@ C:\Users\LeviPc\Desktop\Project\csharp\Project\Project\obj\Debug\net8.0-windows1
 C:\Users\LeviPc\Desktop\Project\csharp\Project\Project\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\LeviPc\Desktop\Project\csharp\Project\Project\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\LeviPc\Desktop\Project\csharp\Project\Project\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.IO.Pipelines.dll
+C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Net.Http.Json.dll
+C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Text.Encodings.Web.dll
+C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\System.Text.Json.dll
