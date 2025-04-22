@@ -8,7 +8,7 @@
     Title="Project">
 
     <ShellContent
-        Title="Home"
+        Title="KaralkaTrack"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
