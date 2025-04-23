@@ -5,6 +5,8 @@
 
     <VerticalStackLayout>
         <Label Text="{Binding Text}"/>
+
+        <Button Text="Run" Command="{Binding runCommand}"/>
     </VerticalStackLayout>
     
 

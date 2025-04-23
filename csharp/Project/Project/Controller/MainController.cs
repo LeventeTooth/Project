@@ -1,10 +1,13 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Project.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 
 namespace Project.Controller
@@ -14,22 +17,21 @@ namespace Project.Controller
         [ObservableProperty]
         private string text;
 
-        private ApiCaller handler, updater;
+        private ApiCaller handler;
 
+        [ObservableProperty]
+        private List<Car> cars;
+
+        [RelayCommand]
         async void run()
         {
-            //await handler.Post(new List<KeyValuePair<string, string>> { new KeyValuePair<string, string> ("Name", "TestFromCode") });
-            await updater.Update(new List<KeyValuePair<string, string>> { new KeyValuePair<string, string>("Name", "Kurva") });
-            Text =  $"{await handler.Get()}";
-
+            Cars = JsonSerializer.Deserialize<List<Car>>(await handler.Get(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            Text = Cars.Count > 0 ? $"{Cars[0].License_plate}" : "Fck";
         }
 
         public MainController()
         {
-
-            handler = new ApiCaller("http://127.0.0.1:8000/api/test");
-            updater = new ApiCaller("http://127.0.0.1:8000/api/test/9");
-            run();
+            handler = new ApiCaller("http://127.0.0.1:8000/api/","cars");
         }
     }
 }

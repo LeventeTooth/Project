@@ -4,20 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.Model
+namespace Project.Controller
 {
     public class ApiCaller
     {
         private string url;
-        public ApiCaller(string url)
+        private string path;
+        private int? id;
+        public ApiCaller(string url, string path, int? id = null)
         {
             this.url = url;
+            this.path = path;
+            this.id = id;
         }
 
         public async Task<string> Get()
         {
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Get, $"{url}");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"{url}{path}");
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
@@ -26,21 +30,21 @@ namespace Project.Model
         public async Task<string> Post(List<KeyValuePair<string, string>> collection)
         {
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Post, $"{url}");
-            
+            var request = new HttpRequestMessage(HttpMethod.Post, $"{url}{path}");
+
             var content = new FormUrlEncodedContent(collection);
             request.Content = content;
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync()   ;
+            return await response.Content.ReadAsStringAsync();
 
         }
 
         public async Task<string> Update(List<KeyValuePair<string, string>> collection)
         {
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Put, $"{url}");
-            
+            var request = new HttpRequestMessage(HttpMethod.Put, $"{url}{path}/{id}");
+
             var content = new FormUrlEncodedContent(collection);
             request.Content = content;
             var response = await client.SendAsync(request);
@@ -53,12 +57,14 @@ namespace Project.Model
         public async Task<string> Delete()
         {
             var client = new HttpClient();
-            var request = new HttpRequestMessage(HttpMethod.Delete, $"{url}");
+            var request = new HttpRequestMessage(HttpMethod.Delete, $"{url}{path}/{id}");
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
             return await response.Content.ReadAsStringAsync();
 
         }
+
+
 
     }
 }
