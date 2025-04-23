@@ -9,23 +9,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/user', function (Request $request) {
-    return User::all();
+    return response()->json(User::all());
 });
 
 Route::get('/cars', function () {
-    return Car::all();
+    return response()->json(Car::all());
 });
 
 Route::get('/tracks', function () {
-    return Track::all();
+    return response()->json(Track::all());
 });
 
 Route::get('/rents', function () {
-    return Rent::all();
+    return response()->json(Rent::all());
 });
 
 Route::get('/groups', function () {
-    return Group::all();
+    return response()->json(Group::all());
 });
 
 
