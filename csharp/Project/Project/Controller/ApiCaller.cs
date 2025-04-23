@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Project.Controller
 {
-    public class ApiCaller
+    public class ApiCaller<T>
     {
+        private readonly JsonSerializerOptions opt =
+            new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+
         private string url;
         private string path;
         private int? id;
@@ -18,13 +22,13 @@ namespace Project.Controller
             this.id = id;
         }
 
-        public async Task<string> Get()
+        public async Task<List<T>> Get()
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Get, $"{url}{path}");
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<List<T>>(await response.Content.ReadAsStringAsync(), opt);
         }
 
         public async Task<string> Post(List<KeyValuePair<string, string>> collection)

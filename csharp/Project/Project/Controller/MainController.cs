@@ -17,7 +17,7 @@ namespace Project.Controller
         [ObservableProperty]
         private string text;
 
-        private ApiCaller handler;
+        private ApiCaller<Car> handler;
 
         [ObservableProperty]
         private List<Car> cars;
@@ -25,13 +25,13 @@ namespace Project.Controller
         [RelayCommand]
         async void run()
         {
-            Cars = JsonSerializer.Deserialize<List<Car>>(await handler.Get(), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            Cars = await handler.Get();
             Text = Cars.Count > 0 ? $"{Cars[0].License_plate}" : "Fck";
         }
 
         public MainController()
         {
-            handler = new ApiCaller("http://127.0.0.1:8000/api/","cars");
+            handler = new ApiCaller<Car>("http://127.0.0.1:8000/api/","cars");
         }
     }
 }
