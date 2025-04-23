@@ -14,10 +14,10 @@ class GroupSeeder extends Seeder
     public function run(): void
     {
         Group::create([
-            'group'=>'Nincs'
+            'title'=>'Nincs'
         ]);
         Group::create([
-            'group'=>'BromoTeam'
+            'title'=>'BromoTeam'
         ]);
     }
 }
