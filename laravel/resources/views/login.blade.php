@@ -24,7 +24,7 @@
                 class="w-full py-2 px-4 rounded border-2 bg-green-500 text-white border-white hover:bg-green-600 transition duration-700">
                 Belépés
             </button>
-            <a href="{{ route('auth.create') }}" type="button" class="text-sm text-stone-700 underline hover:text-green-600 transition">
+            <a href="{{ route('auth.create') }}" type="button" class="text-sm text-stone-700 underline hover:text-green-600 duration-700 transition">
                 Nincs még fiókom, Regisztrálok
             </a>
         </form>
