@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\TrackController;
 use Illuminate\Support\Facades\Route;
@@ -26,5 +27,6 @@ Route::get('/pictures', function () {
 
 Route::resource('/tracks', TrackController::class);
 
+Route::resource('/auth', AuthController::class);
 
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'index'])->name('register');

@@ -13,7 +13,14 @@
     <div class="navbar" style="background-image: url({{ asset('images/backgroundImage.png') }});">
         <!-- rollable page -->
         <div class="w-full h-full overflow-y-auto">
-            <div class="p-5 bg-black/45">
+            <!-- first black div -->
+            <div class="p-1 bg-black/45">
+                <div class="flex justify-end space-x-4 p-2">
+                    <a href="{{ route('auth.index') }}" class="bg-stone-700 text-stone-300 text-l px-4 py-2 font-semibold rounded border-2 border-stone-300  hover:bg-stone-300 hover:text-stone-700 hover:border-stone-700 transition duration-1000">Login</a>
+                    <a href="{{ route('auth.create') }}" class="bg-green-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-green-600 hover:border-stone-400 transition duration-700">Register</a>
+                </div>
+
+                <!-- picture line grid -->
                 <div class="grid grid-cols-12 gap-4">
                     <div class="col-span-1"></div>
                     <!-- kralkla image -->
