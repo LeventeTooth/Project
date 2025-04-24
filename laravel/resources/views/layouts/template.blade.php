@@ -16,8 +16,8 @@
             <!-- first black div -->
             <div class="p-1 bg-black/45">
                 <div class="flex justify-end space-x-4 p-2">
-                    <a href="{{ route('auth.index') }}" class="bg-stone-700 text-stone-300 text-l px-4 py-2 font-semibold rounded border-2 border-stone-300  hover:bg-stone-300 hover:text-stone-700 hover:border-stone-700 transition duration-1000">Login</a>
-                    <a href="{{ route('auth.create') }}" class="bg-green-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-green-600 hover:border-stone-400 transition duration-700">Register</a>
+                    <a href="{{ route('auth.index') }}" class="bg-stone-700 text-stone-300 text-l px-4 py-2 font-semibold rounded border-2 border-stone-300  hover:bg-stone-300 hover:text-stone-700 hover:border-stone-700 transition duration-1000">Belepes</a>
+                    <a href="{{ route('auth.create') }}" class="bg-green-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-green-600 hover:border-stone-400 transition duration-700">Regisztracio</a>
                 </div>
 
                 <!-- picture line grid -->

@@ -13,3 +13,7 @@
 .navbar{
     @apply bg-cover bg-center bg-fixed h-screen w-full flex justify-center items-center
 }
+
+.background{
+    @apply text-center text-white bg-black/45 mt-10
+}
