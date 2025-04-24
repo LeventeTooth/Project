@@ -28,5 +28,7 @@ Route::get('/pictures', function () {
 Route::resource('/tracks', TrackController::class);
 
 Route::resource('/auth', AuthController::class);
+Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
+
 
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'index'])->name('register');

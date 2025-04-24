@@ -6,36 +6,51 @@ use App\Models\Group;
 use App\Models\User;
 use Hash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class AuthController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
+    /* TODO: normalis store validate, belepes utan a belepes gomb helyett profilom, meg a delete, edit/update */
     public function index()
     {
+        
         return view('login');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    public function login(Request $request){
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required'
+        ]);
+
+        $user = User::where('username', $request->username)->first();
+
+        if ($user && Hash::check($request->password, $user->password)) {
+            Auth::login($user);
+            return redirect()->route('main', ['loggedin' => 'true']);
+        }
+
+        return back()->withErrors([
+            'login' => 'Hibás felhasználónév vagy jelszó.'
+        ])->withInput();
+    }
+
     public function create()
     {
-        $groups = Group::all(); // vagy csak ami kell
+        $groups = Group::all();
         return view('register', ['groups'=>$groups]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+
     public function store(Request $request)
     {
         $validate = $request->validate([
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users',
             'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|string|min:6',
+            'password' => 'required|string',
             'address' => 'nullable|string|max:255',
             'birth_date' => 'required|date',
             'age' => 'required|integer|min:0',
@@ -51,33 +66,25 @@ class AuthController extends Controller
         
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+
     public function edit(string $id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     public function update(Request $request, string $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
+
     public function destroy(string $id)
     {
         //
