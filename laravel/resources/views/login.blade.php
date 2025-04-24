@@ -4,10 +4,9 @@
 
 @section('content')
 
-    <p class="background p-3 text-3xl">Bejelentkezes</p>
-    <div class="flex items-center justify-center mt-8">
+    <div class="flex items-center justify-center min-h-[calc(100vh-260px)] bg-cover bg-center">
         <form class="bg-stone-300 p-8 rounded-lg shadow-lg space-y-6">
-            <h2 class="text-2xl font-bold text-center text-stone-700">Belépés</h2>
+            <h2 class="text-2xl font-bold text-center text-stone-700">Bejelentkezes</h2>
 
             <div>
                 <label for="email" class="block text-sm font-medium text-stone-700">Email</label>
@@ -25,9 +24,9 @@
                 class="w-full py-2 px-4 rounded border-2 bg-green-500 text-white border-white hover:bg-green-600 transition duration-700">
                 Belépés
             </button>
-            <button type="button" class="text-sm text-stone-700 underline hover:text-green-600 transition">
+            <a href="{{ route('auth.create') }}" type="button" class="text-sm text-stone-700 underline hover:text-green-600 transition">
                 Nincs még fiókom, Regisztrálok
-            </button>
+            </a>
         </form>
     </div>
 
