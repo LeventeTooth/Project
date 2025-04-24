@@ -29,6 +29,8 @@ Route::resource('/tracks', TrackController::class);
 
 Route::resource('/auth', AuthController::class);
 Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
+Route::get('/my-profile', [AuthController::class, 'account'])->name('auth.account');
+Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'index'])->name('register');

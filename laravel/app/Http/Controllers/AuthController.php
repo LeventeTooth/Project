@@ -12,11 +12,22 @@ use Symfony\Contracts\Service\Attribute\Required;
 class AuthController extends Controller
 {
 
-    /* TODO: normalis store validate, belepes utan a belepes gomb helyett profilom, meg a delete, edit/update */
+    /* TODO: normalis store validate, belepes utan a belepes gomb helyett profilom, meg a delete, edit/update, csapatletrehozas */
     public function index()
     {
         
         return view('login');
+    }
+
+    public function logout(){
+        Auth::logout();
+        return view('main');
+    }
+
+    public function account(){
+        $userId = Auth::id();
+        $user = User::find($userId);
+        return view('account' ,['user' => $user]);
     }
 
     public function login(Request $request){
@@ -65,6 +76,8 @@ class AuthController extends Controller
         return redirect()->route('auth.index')->with('success', 'Sikeres regisztráció! Jelentkezz be.');
         
     }
+
+
 
 
     public function show(string $id)
