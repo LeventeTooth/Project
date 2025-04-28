@@ -12,13 +12,17 @@
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
-        <Entry Text="{Binding Text}" Grid.Row="0" Grid.Column="0" 
-               Placeholder="Enter User key" 
-               HorizontalOptions="Start" VerticalOptions="Start" />
+        <HorizontalStackLayout Padding="3">
+            
+        </HorizontalStackLayout>
+        <Entry Text="{Binding UserEmail}" Grid.Row="0" Grid.Column="0" 
+               Placeholder="Enter Email" 
+               HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1"/>
         
         <Button Text="Enter" Grid.Row="0" Grid.Column="1" WidthRequest="90" 
-                HorizontalOptions="Start" Padding="1,1,1,1"/>
+                HorizontalOptions="Start" Padding="1,1,1,1" Command="{Binding runCommand}" Margin="5,1,1,1"/>
+
+        <Label Text="{Binding Text}" Grid.Row="1" Grid.Column="0" TextColor="Red"/>
     </Grid> 
     
 </ContentPage>

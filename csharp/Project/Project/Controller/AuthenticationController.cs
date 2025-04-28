@@ -10,9 +10,9 @@ namespace Project.Controller
     public class AuthenticationController
     {
         private ApiCaller<User> api;
-        public async bool Auth(string email)
+        public async Task<bool> Auth(string email)
         {
-            api = new ApiCaller<User>("https://127.0.0.1:8000/api/", "user");
+            api = new ApiCaller<User>("http://127.0.0.1:8000/api/", "user");
 
             var users = await api.Get();
             if (users.FindAll(u=>u.Email == email).Count == 1)
