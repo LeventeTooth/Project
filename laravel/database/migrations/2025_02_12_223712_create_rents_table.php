@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId("user_id")->constrained("users", "id");
             $table->foreignId("track_id")->constrained("tracks", "id");
             $table->foreignId("car_id")->constrained("cars", "id");
+            $table->dateTime("rent_date_time");
             $table->timestamps();
             $table->softDeletes();
         });

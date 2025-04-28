@@ -13,7 +13,8 @@ class RentController extends Controller
      */
     public function index()
     {
-        //
+        $rents = Rent::all();
+        return response()->json($rents);
     }
 
     /**
@@ -29,7 +30,17 @@ class RentController extends Controller
      */
     public function store(StoreRentRequest $request)
     {
-        //
+        $data = $request->validate([
+            'user_id' => 'required|integer',
+            'track_id' => 'required|integer',
+            'car_id' => 'required|integer',
+            'rent_date_time' => 'required|date',
+        ]);
+
+        $newRent = Rent::create($data);
+
+
+        return response()->json(['status' => 200, 'message' => 'Rent successfully created.'], 200);
     }
 
     /**

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RentController;
 use App\Models\Car;
 use App\Models\Group;
 use App\Models\Rent;
@@ -20,12 +21,11 @@ Route::get('/tracks', function () {
     return response()->json(Track::all());
 });
 
-Route::get('/rents', function () {
-    return response()->json(Rent::all());
-});
-
 Route::get('/groups', function () {
     return response()->json(Group::all());
 });
 
 
+//Kesz api
+Route::get('/rents', [RentController::class, 'index']);
+Route::post('/rents/store', [RentController::class, 'store']);

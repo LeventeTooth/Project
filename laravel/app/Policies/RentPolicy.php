@@ -13,7 +13,7 @@ class RentPolicy
      */
     public function viewAny(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,7 +21,7 @@ class RentPolicy
      */
     public function view(User $user, Rent $rent): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class RentPolicy
      */
     public function create(User $user): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -37,7 +37,7 @@ class RentPolicy
      */
     public function update(User $user, Rent $rent): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class RentPolicy
      */
     public function restore(User $user, Rent $rent): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -61,6 +61,6 @@ class RentPolicy
      */
     public function forceDelete(User $user, Rent $rent): bool
     {
-        return false;
+        return true;
     }
 }

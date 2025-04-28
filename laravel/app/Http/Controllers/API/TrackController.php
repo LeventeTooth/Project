@@ -13,7 +13,8 @@ class TrackController extends Controller
      */
     public function index()
     {
-        //
+        $tracks = Track::all();
+        return response()->json($tracks);
     }
 
     /**
