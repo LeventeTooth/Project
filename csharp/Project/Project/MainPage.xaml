@@ -5,24 +5,29 @@
 
     <Grid Padding="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
+            <RowDefinition Height="95"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <HorizontalStackLayout Padding="3">
-            
-        </HorizontalStackLayout>
-        <Entry Text="{Binding UserEmail}" Grid.Row="0" Grid.Column="0" 
-               Placeholder="Enter Email" 
-               HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1"/>
-        
-        <Button Text="Enter" Grid.Row="0" Grid.Column="1" WidthRequest="90" 
-                HorizontalOptions="Start" Padding="1,1,1,1" Command="{Binding runCommand}" Margin="5,1,1,1"/>
 
-        <Label Text="{Binding Text}" Grid.Row="1" Grid.Column="0" TextColor="Red"/>
-    </Grid> 
-    
+        <Border Padding="2" BackgroundColor="#3B2E58" >
+            <HorizontalStackLayout Grid.Row="0" Grid.Column="0">
+                <VerticalStackLayout  >
+                    <Entry Text="{Binding UserEmail}" 
+               Placeholder="Enter Email" WidthRequest="143"
+               HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1"/>
+                    <Label Text="{Binding Text}" TextColor="Red"/>
+                </VerticalStackLayout>
+
+                <Button Text="Enter"  WidthRequest="100"
+                HorizontalOptions="Start" Padding="1,1,1,1" Command="{Binding runCommand}" Margin="5,1,1,1"/>
+            </HorizontalStackLayout>
+        </Border>
+    </Grid>
+
 </ContentPage>

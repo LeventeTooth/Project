@@ -30,7 +30,7 @@ namespace Project.Controller
         [RelayCommand]
         async void run()
         {
-            var isAuthed =await  auth.Auth(userEmail);
+            var isAuthed =await  auth.Auth(UserEmail);
             if (isAuthed)
             {
                 Text = "Siker";
@@ -41,7 +41,7 @@ namespace Project.Controller
 
         public MainController()
         {
-            api = new ApiCaller<User>("http://192.168.1.178/api/","user");
+            api = new ApiCaller<User>("http://127.0.0.1:8000/api/","user");
             auth = new AuthenticationController();
         }
     }
