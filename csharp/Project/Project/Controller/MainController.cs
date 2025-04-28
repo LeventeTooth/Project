@@ -18,19 +18,30 @@ namespace Project.Controller
         [ObservableProperty]
         private string userEmail;
 
-        private ApiCaller<Car> api;
+        [ObservableProperty]
+        private string text;
+
+        
+
+        private ApiCaller<User> api;
         private AuthenticationController auth;
 
 
         [RelayCommand]
         async void run()
         {
-            var isAuthed = auth.Auth(userEmail);
+            var isAuthed =await  auth.Auth(UserEmail);
+            if (isAuthed)
+            {
+                Text = "Siker";
+                
+            }
+            else { Text = "Not Authorized"; }
         }
 
         public MainController()
         {
-            api = new ApiCaller<Car>("http://127.0.0.1:8000/api/","");
+            api = new ApiCaller<User>("http://127.0.0.1:8000/api/","user");
             auth = new AuthenticationController();
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,7 +42,7 @@ namespace Project.Controller
             return JsonSerializer.Deserialize<T>(await response.Content.ReadAsStringAsync(), opt);
         }
 
-        public async Task<string> Post(List<KeyValuePair<string, string>> collection)
+        public async Task<Response> Post(List<KeyValuePair<string, string>> collection)
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Post, $"{url}{path}");
@@ -50,11 +51,11 @@ namespace Project.Controller
             request.Content = content;
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<Response>(await response.Content.ReadAsStringAsync(), opt);
 
         }
 
-        public async Task<string> Update(List<KeyValuePair<string, string>> collection, int id)
+        public async Task<Response> Update(List<KeyValuePair<string, string>> collection, int id)
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Put, $"{url}{path}/{id}");
@@ -63,18 +64,18 @@ namespace Project.Controller
             request.Content = content;
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<Response>(await response.Content.ReadAsStringAsync(), opt);
 
 
         }
 
-        public async Task<string> Delete(int id)
+        public async Task<Response> Delete(int id)
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Delete, $"{url}{path}/{id}");
             var response = await client.SendAsync(request);
             response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<Response>(await response.Content.ReadAsStringAsync(), opt);
 
         }
 
