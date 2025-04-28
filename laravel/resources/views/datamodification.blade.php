@@ -6,8 +6,8 @@
 
 
     <div class="min-h-screen flex items-center justify-center">
-        <form class="bg-stone-300 p-8 rounded-lg shadow-lg space-y-4 w-full max-w-md" method="POST"
-            action="{{ route('auth.update', ['auth' => $user->id]) }}">
+        <form class="bg-stone-300 p-8 rounded-lg shadow-lg space-y-4 w-full max-w-md" method="GET"
+            action="{{ route('auth.update',  $user->id) }}">
             @csrf
             @method('PUT')
             <h2 class="text-2xl font-bold text-center text-stone-700">Adat modositas</h2>

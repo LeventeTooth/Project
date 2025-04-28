@@ -134,7 +134,12 @@ class AuthController extends Controller
 
     public function destroy(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $user->delete();
+    
+
+        return redirect()->route('main')->with('status', 'User has been deleted successfully!');
     }
 
 }

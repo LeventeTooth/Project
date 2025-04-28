@@ -29,11 +29,11 @@
                 </tr>
                 <tr class="border-b">
                     <td class="px-4 py-2 font-semibold text-gray-700">Születési dátum</td>
-                    <td class="px-4 py-2">{{ \Carbon\Carbon::parse($user->birth_date)->format('Y-m-d') }}</td>
+                    <td class="px-4 py-2">{{$user->birth_date }}</td>
                 </tr>
                 <tr class="border-b">
                     <td class="px-4 py-2 font-semibold text-gray-700">Kor</td>
-                    <td class="px-4 py-2">{{ \Carbon\Carbon::parse($user->birth_date)->age }}</td>
+                    <td class="px-4 py-2">{{$user->age }}</td>
                 </tr>
                 <tr class="border-b">
                     <td class="px-4 py-2 font-semibold text-gray-700">Csapat</td>
@@ -46,18 +46,24 @@
             </table>
             </form>
         </div>
-        <div class="flex justify space-x-4 mt-3">
-            <a href="{{ route('auth.edit', ['auth' => $user->id]) }}"
-                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+        <div class="flex justify-between  space-x-4 mt-3">
+            <a href="{{ route('auth.edit', $user->id) }}"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">
                 Adat módosítás
             </a>
             <form method="POST" action="{{ route('auth.logout') }}" class="inline">
                 @csrf
-                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">
+                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md">
                     Kijelentkezés
                 </button>
             </form>
-
+            <form action="{{ route('auth.destroy', $user->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md">
+                    Fiok torles
+                </button>
+            </form>
         </div>
     </div>
 
