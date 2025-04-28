@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
         User::create([
             'name'=>'admin',
             'username'=>'admin',
-            'email'=>'addmin@gamil.com',
+            'email'=>'admin@gmail.com',
             'password'=>'admin1234',
             'address'=>'Szentender Kalvaria ut 8',
             'birth_date'=>'2000.04.26',
