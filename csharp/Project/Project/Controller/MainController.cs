@@ -3,6 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using Project.Model;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -15,23 +16,22 @@ namespace Project.Controller
     public partial class MainController: ObservableObject
     {
         [ObservableProperty]
-        private string text;
+        private string userEmail;
 
-        private ApiCaller<Car> handler;
+        private ApiCaller<Car> api;
+        private AuthenticationController auth;
 
-        [ObservableProperty]
-        private List<Car> cars;
 
         [RelayCommand]
         async void run()
         {
-            Cars = await handler.Get();
-            Text = Cars.Count > 0 ? $"{Cars[0].License_plate}" : "Fck";
+            var isAuthed = auth.Auth(userEmail);
         }
 
         public MainController()
         {
-            handler = new ApiCaller<Car>("http://127.0.0.1:8000/api/","cars");
+            api = new ApiCaller<Car>("http://127.0.0.1:8000/api/","");
+            auth = new AuthenticationController();
         }
     }
 }
