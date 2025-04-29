@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use App\Models\Rent;
 use App\Http\Requests\StoreRentRequest;
 use App\Http\Requests\UpdateRentRequest;
@@ -30,17 +31,32 @@ class RentController extends Controller
      */
     public function store(StoreRentRequest $request)
     {
-        $data = $request->validate([
+        $validator = Validator::make($request->all(), 
+        [
             'user_id' => 'required|integer',
             'track_id' => 'required|integer',
             'car_id' => 'required|integer',
             'rent_date_time' => 'required|date',
         ]);
+        
+        if($validator->fails()){
+            $data = [
+                'status' => 422,
+                'message' => 'Rent creating failed in validation.'
+            ];
 
-        $newRent = Rent::create($data);
+            return response()->json($data,422);
+        }
+        else{
+            Rent::create($request->all());
 
+            $data = [
+                'status' => 200,
+                'message' => 'Rent successfully created.'
+            ];
 
-        return response()->json(['status' => 200, 'message' => 'Rent successfully created.'], 200);
+            return response()->json($data,200);
+        }
     }
 
     /**

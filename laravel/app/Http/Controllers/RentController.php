@@ -13,7 +13,7 @@ class RentController extends Controller
      */
     public function index()
     {
-        //
+        dd(Rent::all());
     }
 
     /**
