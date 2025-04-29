@@ -64,4 +64,16 @@
 		<PackageReference Include="System.Net.Http.Json" Version="9.0.4" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="CarsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RentsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="TracksPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
