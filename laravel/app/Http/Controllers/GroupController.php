@@ -38,7 +38,7 @@ class GroupController extends Controller
             'title' => $validated['title'],
         ]);
     
-        return redirect()->route('main')->with('success', 'Csapat sikeresen létrehozva!');
+        return redirect()->route('groups.index')->with('success', 'Csapat sikeresen létrehozva!');
 
     }
 
@@ -69,8 +69,11 @@ class GroupController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Group $group)
+    public function destroy($id)
     {
-        //
+        $group = Group::findOrFail($id); // vagy: Group::where('id', $id)->firstOrFail();
+        $group->delete();
+    
+        return redirect()->route('groups.index')->with('success', 'Sikeres törlés');
     }
 }
