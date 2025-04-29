@@ -22,43 +22,46 @@ namespace Project.Controller
         private string authRespText;
 
         [ObservableProperty]
-        private User currentSelectedUser;
+        private bool isAuthed;
 
-        //public ObservableCollection<User> Users;
-        [ObservableProperty]
-        private List<User> users;
-
-
-        private ApiCaller<User> api;
         private AuthenticationController auth;
 
 
         [RelayCommand]
         async void run()
         {
-            var isAuthed = await auth.Auth(UserEmailA);
-            if (isAuthed)
+            IsAuthed = await auth.Auth(UserEmailA);
+            if (IsAuthed)
             {
-                AuthRespText = "Siker";
-                Users = await api.Get();
-
-                //foreach (var u in users)
-                //{
-                    //Users.Add(u);
-                //}
-                
-                AuthRespText = $"Krv+ {Users.Count}";
+                AuthRespText = "Authorized";
 
 
+              
             }
             else { AuthRespText = "Not Authorized"; }
         }
 
+        [RelayCommand]
+        async void toMain() {
+            await Shell.Current.GoToAsync("///MainPage");
+        }
+        [RelayCommand]
+        async void toCars() {
+            await Shell.Current.GoToAsync("///CarsPage");
+        }
+        [RelayCommand]
+        async void toTracks() {
+            await Shell.Current.GoToAsync("///TracksPage");
+        }
+        [RelayCommand]
+        async void toRents() {
+            await Shell.Current.GoToAsync("///RentsPage");
+        }
+
         public MainController()
         {
-            api = new ApiCaller<User>("http://127.0.0.1:8000/api/", "user");
             auth = new AuthenticationController();
-            //Users = new ObservableCollection<User>();
+            
         }
     }
 }
