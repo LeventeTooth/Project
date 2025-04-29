@@ -16,7 +16,6 @@ class RentController extends Controller
     public function index()
     {
         $rents = Rent::all();
-
         return response()->json($rents, 200);
     }
 
@@ -36,9 +35,9 @@ class RentController extends Controller
         $validator = Validator::make($request->all(), 
         [
             'user_id' => 'required|integer',
-            'track_id' => 'required|integer',
             'car_id' => 'required|integer',
-            'rent_date_time' => 'required|date',
+            'rent_time' => 'required|string',
+            'event_id' => 'required|integer'
         ]);
         
         if($validator->fails()){
@@ -99,9 +98,9 @@ class RentController extends Controller
         $validator = Validator::make($request->all(), 
         [
             'user_id' => 'required|integer',
-            'track_id' => 'required|integer',
             'car_id' => 'required|integer',
-            'rent_date_time' => 'required|date',
+            'rent_time' => 'required|string',
+            'event_id' => 'required|integer'
         ]);
         
         if($validator->fails()){

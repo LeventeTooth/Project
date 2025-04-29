@@ -15,7 +15,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all();
+        return response()->json($events, 200);
     }
 
     /**
@@ -31,7 +32,31 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        //
+        $validator = Validator::make($request->all(), 
+        [
+            'name' => 'required|string',
+            'date' => 'required|date',
+            'track_id' => 'required|integer',
+        ]);
+        
+        if($validator->fails()){
+            $data = [
+                'status' => 422,
+                'message' => 'Event creating failed in validation.'
+            ];
+
+            return response()->json($data,422);
+        }
+        else{
+            Event::create($request->all());
+
+            $data = [
+                'status' => 200,
+                'message' => 'Event created successfully.'
+            ];
+
+            return response()->json($data,200);
+        }
     }
 
     /**
@@ -39,7 +64,19 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        $foundEvent = Event::find($event->id);
+
+        if($foundEvent == null){
+            $data = [
+                'status' => 404,
+                'message' => 'Event with this id not found.'
+            ];
+
+            return response()->json($data,404);
+        } 
+        else{
+            return response()->json($foundEvent,200);
+        }
     }
 
     /**
@@ -55,7 +92,33 @@ class EventController extends Controller
      */
     public function update(UpdateEventRequest $request, Event $event)
     {
-        //
+        $eventToUpdate = Event::find($event->id);
+
+        $validator = Validator::make($request->all(), 
+        [
+            'name' => 'required|string',
+            'date' => 'required|date',
+            'track_id' => 'required|integer',
+        ]);
+        
+        if($validator->fails()){
+            $data = [
+                'status' => 422,
+                'message' => 'Event updtaing failed in validation.'
+            ];
+
+            return response()->json($data,422);
+        }
+        else{
+            $eventToUpdate->update($request->all());
+
+            $data = [
+                'status' => 200,
+                'message' => 'Event updated successfully.'
+            ];
+
+            return response()->json($data,200);
+        }
     }
 
     /**
@@ -63,6 +126,25 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        $eventToDelete = Event::find($event->id);
+
+        if($eventToDelete == null){
+            $data = [
+                'status' => 404,
+                'message' => 'Event with this id not found.'
+            ];
+
+            return response()->json($data,404);
+        } 
+        else{
+            $eventToDelete->delete();
+
+            $data = [
+                'status' => 200,
+                'message' => 'Event deleted successfully.'
+            ];
+
+            return response()->json($data,200);
+        }
     }
 }
