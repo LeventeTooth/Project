@@ -10,7 +10,7 @@
     </div>
 
     <div class="item">
-        <a class="text-5xl">Jegyek: 6000Ft/auto</a>
+        <a class="text-5xl">Jegyek: 6000Ft/auto-tól</a>
     </div>
 
     <div class="hidden md:block">

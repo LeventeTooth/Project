@@ -12,7 +12,7 @@ use Symfony\Contracts\Service\Attribute\Required;
 class AuthController extends Controller
 {
 
-    /* TODO: normalis store validate, belepes utan a belepes gomb helyett profilom, meg a delete, edit/update, csapatletrehozas */
+
     public function index()
     {
 
@@ -89,22 +89,17 @@ class AuthController extends Controller
 
     public function edit($id)
     {
-        // A felhasználó adatainak betöltése
         $user = User::findOrFail($id);
 
-        // A csoportok lekérése
         $groups = Group::all();
 
-        // A datamodification.blade.php-hez a szükséges adatok átadása
         return view('auth.datamodification', ['user' => $user, 'groups' => $groups]);
     }
 
     public function update(Request $request, $id)
     {
-        // A felhasználó betöltése az id alapján
         $user = User::findOrFail($id);
 
-        // A validáció
         $request->validate([
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255',
@@ -115,7 +110,6 @@ class AuthController extends Controller
             'group_id' => 'nullable|integer|exists:groups,id'
         ]);
 
-        // A felhasználói adatok frissítése
         $user->update($request->only([
             'name',
             'username',
@@ -126,7 +120,6 @@ class AuthController extends Controller
             'group_id'
         ]));
 
-        // Visszairányítás a profil oldalra
         return redirect()->route('auth.account')->with('success', 'Adatok sikeresen frissítve.');
     }
     

@@ -14,7 +14,7 @@ class Group extends Model
 
     protected $fillable = ['title'];
 
-    public function user()
+    public function users()
     {
         return $this->belongsTo(User::class);
     }
