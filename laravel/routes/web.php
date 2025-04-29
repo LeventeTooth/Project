@@ -21,7 +21,7 @@ Route::get('/events', function () {
     return view('events');
 })->name("events");
 
-Route::get('/groups', [GroupController::class, 'index']);
+Route::resource('/groups', GroupController::class);
 
 Route::get('/pictures', function () {
     return view('pictures');
