@@ -7,24 +7,31 @@
     <ScrollView>
         <StackLayout>
 
-            <CollectionView ItemsSource="{Binding Cars}" Margin="5">
+            <CollectionView ItemsSource="{Binding Cars}" Margin="5" x:Name="cw">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Background="DarkCyan" Margin="3">
-                        <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*" Margin="5" >
-                            <Label Grid.Column="0" Text="{Binding License_plate}"/>
-                            <Label Grid.Column="1" Text="{Binding Model}"/>
-                            <Label Grid.Column="2" Text="{Binding Price}"/>
-                            <Label Grid.Column="3" Text="{Binding Power}"/>
-                        </Grid>
+                            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*,*,*" Margin="5" >
+                                <Label Grid.Column="0" Text="{Binding License_plate}"/>
+                                <Label Grid.Column="1" Text="{Binding Model}"/>
+                                <Label Grid.Column="2" Text="{Binding Price}"/>
+                                <Label Grid.Column="3" Text="{Binding Power}"/>
+                                <Button Text="Modify" BackgroundColor="#D2B200" Grid.Column="4" 
+                                        Command="{Binding BindingContext.modifyCommand, Source={x:Reference cw }}" 
+                                        CommandParameter="{Binding Id}"/>
+                                <!--CommandParameter="{Binding Id}"-->
+                                <Button Text="Delete" BackgroundColor="Red" Grid.Column="5"
+                                        Command="{Binding BindingContext.deleteCommand, Source={x:Reference cw}}"
+                                        CommandParameter="{Binding Id}"/>
+                            </Grid>
                         </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            
+
             <!--#region Form-->
 
-            <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*" Margin="0,20" Padding="4">
+            <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*" Margin="0,20" Padding="4">
                 <Entry Margin="3" x:Name="LicensePlate" Placeholder="Enter License Plate" 
                        Grid.Row="0" Grid.Column="0" Text="{Binding CurrentPlate}"/>
                 <Entry Margin="3" x:Name="Model" Placeholder="Enter Model" 
@@ -33,23 +40,25 @@
                        Grid.Row="1" Grid.Column="0" Text="{Binding CurrentPrice}"/>
                 <Entry Margin="3" x:Name="Power" Placeholder="Enter Power" 
                        Grid.Row="1" Grid.Column="1" Text="{Binding CurrentPower}"/>
-                <Button Margin="3" Text="Enter" Grid.Row="2" Grid.Column="0" 
+                <Entry Margin="3" x:Name="Img" Placeholder="Enter Image address"
+                       Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="{Binding CurrentImg}"/>
+                <Button Margin="3" Text="Enter" Grid.Row="3" Grid.Column="0" 
                         Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
                         Command="{Binding addCommand}"/>
             </Grid>
-            <StackLayout>
+            <!--<StackLayout>
                 <Label Text="{Binding CurrentPlate}"/>
                 <Label Text="{Binding CurrentModel}"/>
                 <Label Text="{Binding CurrentPrice}"/>
                 <Label Text="{Binding CurrentPower}"/>
-            </StackLayout>
-            
-            
+            </StackLayout>-->
+
+
             <!--#endregion Form-->
 
             <Button Text="Back" Command="{Binding toMainCommand}" Margin="5,5,15,5"/>
         </StackLayout>
     </ScrollView>
-    
-    
+
+
 </ContentPage>
