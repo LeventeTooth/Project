@@ -6,40 +6,56 @@
     <Grid Padding="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="95"/>
+            <!--95-->
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="260"/>
+            <!--260-->
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
 
-        <Border Padding="2" BackgroundColor="#3B2E58" >
-            <HorizontalStackLayout Grid.Row="0" Grid.Column="0">
-                <VerticalStackLayout  >
-                    <Label Text="Auth"/>
-                    <Entry Text="{Binding UserEmail}" 
-               Placeholder="Enter Email" WidthRequest="143"
-               HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1"/>
-                    <Label Text="{Binding Text}" TextColor="Red"/>
-                </VerticalStackLayout>
+        <Border Padding="2" BackgroundColor="#3B2E58" Grid.Row="0" Grid.Column="0"  Margin="0,0,0,5" >
+            <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*">
 
-                <Button Text="Enter"  WidthRequest="100"
+                <Label Text="Auth" Grid.Row="0" Grid.Column="0"/>
+
+                <Entry Text="{Binding UserEmailA}" x:Name="AuthEntry"
+               Placeholder="Enter Email" WidthRequest="143" Grid.Row="1" Grid.Column="0"
+               HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1"/>
+
+                <Label Text="{Binding AuthRespText}" TextColor="Red" Grid.Column="0" Grid.Row="2"/>
+
+
+                <Button Text="Enter"  WidthRequest="100" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3"
                 HorizontalOptions="Start" Padding="1,1,1,1" Command="{Binding runCommand}" Margin="5,1,1,1"/>
-            </HorizontalStackLayout>
+
+
+            </Grid>
         </Border>
-        
-        
-        <Border Padding="2">
-            <HorizontalStackLayout  Grid.Row="1" Grid.Column="0">
-                <Label Text="New Rent"/>
-                
-            </HorizontalStackLayout>
+
+
+        <Border Padding="2" Background="#3B2E58" Grid.Row="1" Grid.Column="0">
+            <Grid  RowDefinitions="*,*,*,*" ColumnDefinitions="*"
+              VerticalOptions="Start">
+                <Label Text="New Rent" Grid.Row="0" Grid.Column="0" />
+
+                <Picker Grid.Row="1" Grid.Column="0" 
+                       ItemDisplayBinding="{Binding Email}"
+                        ItemsSource="{Binding Users}" FontSize="Default" >
+                    
+                </Picker>
+
+            </Grid>
         </Border>
-        
-        
+
+
+
+
+
     </Grid>
 
 </ContentPage>
