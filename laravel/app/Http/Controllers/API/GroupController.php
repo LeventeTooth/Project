@@ -15,7 +15,8 @@ class GroupController extends Controller
      */
     public function index()
     {
-        //
+        $groups = Group::all();
+        return response()->json($groups, 200);
     }
 
     /**
@@ -31,7 +32,29 @@ class GroupController extends Controller
      */
     public function store(StoreGroupRequest $request)
     {
-        //
+        $validator = Validator::make($request->all(), 
+        [
+            'title' => 'required|string'
+        ]);
+        
+        if($validator->fails()){
+            $data = [
+                'status' => 422,
+                'message' => 'Group creating failed in validation.'
+            ];
+
+            return response()->json($data,422);
+        }
+        else{
+            Group::create($request->all());
+
+            $data = [
+                'status' => 200,
+                'message' => 'Group created successfully.'
+            ];
+
+            return response()->json($data,200);
+        }
     }
 
     /**
@@ -39,7 +62,19 @@ class GroupController extends Controller
      */
     public function show(Group $group)
     {
-        //
+        $foundGroup = Group::find($group->id);
+
+        if($foundGroup == null){
+            $data = [
+                'status' => 404,
+                'message' => 'Group with this id not found.'
+            ];
+
+            return response()->json($data,404);
+        } 
+        else{
+            return response()->json($foundGroup,200);
+        }
     }
 
     /**
@@ -55,7 +90,31 @@ class GroupController extends Controller
      */
     public function update(UpdateGroupRequest $request, Group $group)
     {
-        //
+        $groupToUpdate = Group::find($group->id);
+
+        $validator = Validator::make($request->all(), 
+        [
+            'title' => 'required|string'
+        ]);
+        
+        if($validator->fails()){
+            $data = [
+                'status' => 422,
+                'message' => 'Group updtaing failed in validation.'
+            ];
+
+            return response()->json($data,422);
+        }
+        else{
+            $groupToUpdate->update($request->all());
+
+            $data = [
+                'status' => 200,
+                'message' => 'Group updated successfully.'
+            ];
+
+            return response()->json($data,200);
+        }
     }
 
     /**
@@ -63,6 +122,25 @@ class GroupController extends Controller
      */
     public function destroy(Group $group)
     {
-        //
+        $groupToDelete = Group::find($group->id);
+
+        if($groupToDelete == null){
+            $data = [
+                'status' => 404,
+                'message' => 'Group with this id not found.'
+            ];
+
+            return response()->json($data,404);
+        } 
+        else{
+            $groupToDelete->delete();
+
+            $data = [
+                'status' => 200,
+                'message' => 'Group deleted successfully.'
+            ];
+
+            return response()->json($data,200);
+        }
     }
 }
