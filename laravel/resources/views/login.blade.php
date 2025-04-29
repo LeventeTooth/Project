@@ -12,7 +12,7 @@
         <form class="bg-stone-300 p-8 rounded-lg shadow-lg space-y-6" method="POST" action="{{ route('auth.login') }}">
             @csrf
             @if(session('success'))
-                <p class="bg-green-200 text-green-900 border-2 rounded border-green-900 text-center p-3">{{ session('success') }}</p>
+                <p class="bg-green-200 text-green-900 border-2 rounded border-green-900 text-center p-3">{{ session('success') }}  <br> Profilomnal lehet csapatot valasztani</p>
             @endif
             <h2 class="text-2xl font-bold text-center text-stone-700">Bejelentkezes</h2>
 

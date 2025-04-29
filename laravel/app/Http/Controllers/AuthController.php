@@ -68,7 +68,6 @@ class AuthController extends Controller
             'address' => 'nullable|string|max:255',
             'birth_date' => 'required|date',
             'age' => 'required|integer|min:0',
-            'group_id' => 'required|exists:groups,id',
         ]);
 
         $validate['password'] = Hash::make($validate['password']);
@@ -89,45 +88,47 @@ class AuthController extends Controller
     }
 
 
-    public function edit(string $id)
+    public function edit($id)
     {
-        $user = User::find($id);
+        // A felhasználó adatainak betöltése
+        $user = User::findOrFail($id);
+
+        // A csoportok lekérése
         $groups = Group::all();
-        return view('datamodification', ['groups' => $groups, 'user' => $user]);
+
+        // A datamodification.blade.php-hez a szükséges adatok átadása
+        return view('datamodification', ['user' => $user, 'groups' => $groups]);
     }
 
-
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
+        // A felhasználó betöltése az id alapján
         $user = User::findOrFail($id);
-    
+
+        // A validáció
         $request->validate([
-            'name' => 'required|string',
-            'username' => 'required|string',
-            'email' => 'required|email|max:255|unique:users,email,' . $user->id,
+            'name' => 'required|string|max:255',
+            'username' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
             'address' => 'nullable|string|max:255',
-            'birth_date' => 'nullable|date',
-            'age' => 'nullable|integer',
-            'group_id' => 'nullable|exists:groups,id',
+            'birth_date' => 'required|date',
+            'age' => 'required|integer|min:0',
+            'group_id' => 'nullable|integer|exists:groups,id'
         ]);
-    
-        // Logoljuk a változások előtt
-        \Log::info('Before Update: ', $user->toArray());
-    
-        $user->update([
-            'name' => $request->input('name'),
-            'username' => $request->input('username'),
-            'email' => $request->input('email'),
-            'address' => $request->input('address'),
-            'birth_date' => $request->input('birth_date'),
-            'age' => $request->input('age'),
-            'group_id' => $request->input('group_id'),
-        ]);
-    
-        // Logoljuk a változások után
-        \Log::info('After Update: ', $user->toArray());
-    
-        return redirect()->route('main');
+
+        // A felhasználói adatok frissítése
+        $user->update($request->only([
+            'name',
+            'username',
+            'email',
+            'address',
+            'birth_date',
+            'age',
+            'group_id'
+        ]));
+
+        // Visszairányítás a profil oldalra
+        return redirect()->route('auth.account')->with('success', 'Adatok sikeresen frissítve.');
     }
     
 
