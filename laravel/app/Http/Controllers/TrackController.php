@@ -13,7 +13,8 @@ class TrackController extends Controller
      */
     public function index()
     {
-        return view('track.tracks');
+        $tracks = Track::all();
+        return view('track.tracks', ['tracks' => $tracks]);
     }
 
     /**
