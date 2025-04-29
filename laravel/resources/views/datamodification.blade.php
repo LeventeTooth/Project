@@ -5,69 +5,67 @@
 @section('content')
 
     <div class="min-h-screen flex items-center justify-center">
-<!--         <form class="bg-stone-300 p-8 rounded-lg shadow-lg space-y-4 w-full max-w-md" method="POST"
-            action="{{ route('auth.update', $user) }}">
+        <form class="bg-stone-300 p-8 rounded-lg shadow-lg space-y-4 w-full max-w-md" method="POST"
+            action="{{ route('auth.update', $user->id) }}">
             @csrf
             @method('PUT')
+
             <h2 class="text-2xl font-bold text-center text-stone-700">Adat módosítás</h2>
 
-            <input type="text" name="name" placeholder="Név: {{$user->name}}"
-                class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500" />
+            <div>
+                <label for="name" class="block text-sm font-medium text-stone-700">Név</label>
+                <input type="text" id="name" name="name" value="{{ $user->name }}"
+                    class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+            </div>
 
-            <input type="text" name="username" placeholder="Felhasználónév: {{ $user->username }}"
-                class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500" />
+            <div>
+                <label for="username" class="block text-sm font-medium text-stone-700">Felhasználónév</label>
+                <input type="text" id="username" name="username" value="{{ $user->username }}"
+                    class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+            </div>
 
-            <input type="email" name="email" placeholder="Email: {{$user->email}}"
-                class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500" />
+            <div>
+                <label for="email" class="block text-sm font-medium text-stone-700">Email</label>
+                <input type="email" id="email" name="email" value="{{ $user->email }}"
+                    class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+            </div>
 
-            <input type="text" name="address" placeholder="Cím: {{$user->address}}"
-                class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500" />
+            <div>
+                <label for="address" class="block text-sm font-medium text-stone-700">Cím</label>
+                <input type="text" id="address" name="address" value="{{ $user->address }}"
+                    class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+            </div>
 
-            <input type="number" name="age" placeholder="Kor: {{ $user->age }}"
-                class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500" />
+            <div>
+                <label for="age" class="block text-sm font-medium text-stone-700">Kor</label>
+                <input type="number" id="age" name="age" value="{{ $user->age }}"
+                    class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+            </div>
 
-            <p class="text-gray-500">Születési dátum</p>
-            <input type="date" name="birth_date" value="{{ $user->birth_date }}"
-                class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500" />
+            <div>
+                <label for="birth_date" class="block text-sm font-medium text-stone-700">Születési dátum</label>
+                <input type="date" id="birth_date" name="birth_date" value="{{ $user->birth_date }}"
+                    class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+            </div>
 
-            <p class="text-gray-500">Csapat</p>
-            <div class="flex justify-between">
-                <select name="group_id"
-                    class="w-[65%] p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500">
-                    <option value="" disabled selected>{{ $user->group->title ?? 'Válassz csoportot' }}</option>
+            <div>
+                <label for="group_id" class="block text-sm font-medium text-stone-700">Csoport</label>
+                <select id="group_id" name="group_id"
+                    class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                    <option value="" disabled selected>{{ $user->group ? $user->group->title : 'Válassz csoportot' }}</option>
                     @foreach ($groups as $group)
-                        <option value="{{ $group->id }}">{{ $group->title }}</option>
+                        <option value="{{ $group->id }}" {{ $user->group_id == $group->id ? 'selected' : '' }}>
+                            {{ $group->title }}
+                        </option>
                     @endforeach
                 </select>
-
-                <a href="{{ route('group.create') }}"
-                    class="w-[30%] py-2 px-4 rounded border-2 bg-blue-500 text-white border-white hover:bg-blue-600 duration-700 transition text-center block">
-                    Új Csapat
-                </a>
             </div>
 
             <button type="submit"
-                class="w-full py-2 px-4 rounded border bg-green-500 text-white border-white hover:bg-green-600 duration-700 transition">
+                class="w-full py-2 px-4 rounded border-2 bg-green-500 text-white border-white hover:bg-green-600 duration-700 transition">
                 Módosít
             </button>
-        </form> -->
-        <form method="POST" action="{{ route('auth.update', $user) }}">
-    @csrf
-    @method('PUT')
-    <input type="text" name="name" value="{{ $user->name }}">
-    <input type="text" name="username" value="{{ $user->username }}">
-    <input type="email" name="email" value="{{ $user->email }}">
-    <input type="text" name="address" value="{{ $user->address }}">
-    <input type="number" name="age" value="{{ $user->age }}">
-    <input type="date" name="birth_date" value="{{ $user->birth_date }}">
-    <select name="group_id">
-        <option value="{{ $user->group_id }}" selected>{{ $user->group->title ?? 'Válassz csoportot' }}</option>
-        @foreach ($groups as $group)
-            <option value="{{ $group->id }}">{{ $group->title }}</option>
-        @endforeach
-    </select>
-    <button type="submit">Modosít</button>
-</form>
+        </form>
     </div>
 
 @endsection
