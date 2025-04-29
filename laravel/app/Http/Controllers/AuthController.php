@@ -68,7 +68,6 @@ class AuthController extends Controller
             'address' => 'nullable|string|max:255',
             'birth_date' => 'required|date',
             'age' => 'required|integer|min:0',
-            'group_id' => 'required|exists:groups,id',
         ]);
 
         $validate['password'] = Hash::make($validate['password']);
@@ -96,39 +95,23 @@ class AuthController extends Controller
         return view('datamodification', ['groups' => $groups, 'user' => $user]);
     }
 
-
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
+
+        // Csak a szükséges mezők frissítése
+        $data = $request->only(['name', 'username', 'email', 'address', 'age', 'birth_date', 'group_id']);
     
-        $request->validate([
-            'name' => 'required|string',
-            'username' => 'required|string',
-            'email' => 'required|email|max:255|unique:users,email,' . $user->id,
-            'address' => 'nullable|string|max:255',
-            'birth_date' => 'nullable|date',
-            'age' => 'nullable|integer',
-            'group_id' => 'nullable|exists:groups,id',
-        ]);
+        // Debug: Ellenőrizzük, hogy mit küldünk
+        dd($data);  // Nézd meg, hogy helyesen van-e adat
     
-        // Logoljuk a változások előtt
-        \Log::info('Before Update: ', $user->toArray());
+        // Frissítjük a felhasználót
+        $user->update($data);
     
-        $user->update([
-            'name' => $request->input('name'),
-            'username' => $request->input('username'),
-            'email' => $request->input('email'),
-            'address' => $request->input('address'),
-            'birth_date' => $request->input('birth_date'),
-            'age' => $request->input('age'),
-            'group_id' => $request->input('group_id'),
-        ]);
-    
-        // Logoljuk a változások után
-        \Log::info('After Update: ', $user->toArray());
-    
-        return redirect()->route('main');
+        // Ellenőrizzük, hogy a frissítés sikerült-e
+        dd($user);  // Debug: Módosított adatokat
     }
+    
     
 
 
