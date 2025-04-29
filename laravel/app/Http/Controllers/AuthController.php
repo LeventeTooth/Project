@@ -87,30 +87,48 @@ class AuthController extends Controller
         //
     }
 
-
-    public function edit(string $id)
+    public function edit($id)
     {
-        $user = User::find($id);
+
+        $user = User::findOrFail($id);
+
+
         $groups = Group::all();
-        return view('datamodification', ['groups' => $groups, 'user' => $user]);
+
+
+        return view('datamodification', ['user' => $user, 'groups' => $groups]);
     }
 
     public function update(Request $request, $id)
     {
         $user = User::findOrFail($id);
 
-        // Csak a szükséges mezők frissítése
-        $data = $request->only(['name', 'username', 'email', 'address', 'age', 'birth_date', 'group_id']);
-    
-        // Debug: Ellenőrizzük, hogy mit küldünk
-        dd($data);  // Nézd meg, hogy helyesen van-e adat
-    
-        // Frissítjük a felhasználót
-        $user->update($data);
-    
-        // Ellenőrizzük, hogy a frissítés sikerült-e
-        dd($user);  // Debug: Módosított adatokat
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'username' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'address' => 'nullable|string|max:255',
+            'birth_date' => 'required|date',
+            'age' => 'required|integer|min:0',
+            'group_id' => 'nullable|integer|exists:groups,id'
+        ]);
+
+
+        $user->update($request->only([
+            'name',
+            'username',
+            'email',
+            'address',
+            'birth_date',
+            'age',
+            'group_id'
+        ]));
+
+
+        return redirect()->route('auth.account')->with('success', 'Adatok sikeresen frissítve.');
     }
+    
     
     
 
