@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\RentController;
+use App\Http\Controllers\API\RentController;
 use App\Models\Car;
 use App\Models\Group;
 use App\Models\Rent;
@@ -27,5 +27,4 @@ Route::get('/groups', function () {
 
 
 //Rent api
-Route::get('/rents', [RentController::class, 'index']);
-Route::post('/rents/store', [RentController::class, 'store']);
+Route::resource("/rent", RentController::class);
