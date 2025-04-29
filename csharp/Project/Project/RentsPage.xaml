@@ -15,7 +15,7 @@
                                 <Label Grid.Column="0" Text="{Binding UserEmail}"/>
                                 <Label Grid.Column="1" Text="{Binding TrackName}"/>
                                 <Label Grid.Column="2" Text="{Binding CarPlate}"/>
-                                <Label Grid.Column="3" Text="{Binding Rent_date_time}"/>
+                                <Label Grid.Column="3" Text="{Binding Rent_time}"/>
                             </Grid>
                         </Border>
                     </DataTemplate>

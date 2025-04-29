@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Project.Model;
 using System;
@@ -21,11 +22,18 @@ namespace Project.Controller
         private string currentPrice;
         [ObservableProperty]
         private string currentPower;
+        [ObservableProperty]
+        private string currentImg;
+
+        [ObservableProperty]
+        private int?  currentId;
 
         [ObservableProperty]
         private List<Car> cars;
 
         private ApiCaller<Car> api;
+
+        private bool isModify;
 
         async void Call()
         {
@@ -44,24 +52,58 @@ namespace Project.Controller
                 new KeyValuePair<string, string> ("model",$"{CurrentModel}" ),
                 new KeyValuePair<string, string> ("price",$"{CurrentPrice}" ),
                 new KeyValuePair<string, string> ("power",$"{CurrentPower}" ),
+                new KeyValuePair<string, string> ("img",$"{CurrentImg}" ),
                 };
 
-            await api.Post(newCar);
+            if (!isModify)
+            {
+                await api.Post(newCar);
+            }
+            else
+            {
+                await api.Update(newCar, (int)CurrentId);
+                isModify = false;
+            }
             CurrentPlate = "";
             CurrentModel = "";
             CurrentPrice = "";
             CurrentPower = "";
+            CurrentImg = "";
+            CurrentId = null;
 
+            Call();
+        }
+
+        [RelayCommand]
+        async void modify(int id = 1)
+        {
+            isModify = true;
+            Car car = await api.GetOne(id);
+            CurrentId = id;
+            CurrentPlate = car.License_plate;
+            CurrentModel = car.Model;
+            CurrentPrice = car.Price.ToString();
+            CurrentPower = car.Power;
+            CurrentImg = car.Img;
+
+        }
+
+        [RelayCommand]
+        async void delete(int id = 1)
+        {
+            await api.Delete(id);
             Call();
         }
 
         public CarsController()
         {
+            isModify = false;
             api = new ApiCaller<Car>(ENV.Url, "car");
             CurrentPlate = "";
             CurrentModel = "";
             CurrentPrice = "";
             CurrentPower = "";
+            CurrentImg = "";
             Call();
         }
 
