@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace Project.Model
 {
-    public class Rent
+    public class TrackDay
     {
         public int Id { get; set; }
-        public int User_id { get; set; }
-
-        public int Car_id { get; set; }
-        public string Rent_time { get; set; }
-        public int Track_day { get; set; }
-
+        public string Name { get; set; }
+        public string Date {  get; set; }
+        public int Track_id { get; set; }
         public string? Created_at { get; set; }
         public string? Updated_at { get; set; }
         public string? Deleted_at { get; set; }
     }
 }
- 

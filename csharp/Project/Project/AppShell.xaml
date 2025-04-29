@@ -23,5 +23,9 @@
         Title="Manage Rents"
         ContentTemplate="{DataTemplate local:RentsPage}"
         Route="RentsPage"/>
+    <ShellContent
+    Title="Manage TrackDays"
+    ContentTemplate="{DataTemplate local:TrackDaysPage}"
+    Route="TrackDaysPage"/>
 
 </Shell>

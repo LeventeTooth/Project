@@ -57,6 +57,11 @@ namespace Project.Controller
         async void toRents() {
             await Shell.Current.GoToAsync("///RentsPage");
         }
+        [RelayCommand]
+        async void toTrackDays()
+        {
+            await Shell.Current.GoToAsync("///TrackDaysPage");
+        }
 
         public MainController()
         {

@@ -14,11 +14,12 @@ namespace Project.Model
         public User User { get; set; }
         public Track Track { get; set; }
         public Car Car { get; set; }
-        public string Rent_date_time { get; set; }
+        public string Rent_time { get; set; }
+        public TrackDay TrackDay { get; set; }
 
 
         public string UserEmail { get { return User.Email; } }
-        public string TrackName { get {  return Track.Name; } }
+        public string TrackName { get { return Track.Name; } }//TODO
         public string CarPlate { get { return Car.License_plate; } }
     }
 }

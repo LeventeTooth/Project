@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.TrackDaysPage"
+             Title="TrackDaysPage">
+
+    <ScrollView>
+        <StackLayout>
+
+            <CollectionView ItemsSource="{Binding Trackdays}" Margin="5">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="DarkCyan" Margin="3">
+                            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*" Margin="5" >
+                                <Label Grid.Column="0" Text="{Binding Name}"/>
+                                <Label Grid.Column="1" Text="{Binding Date}"/>
+                                <Label Grid.Column="2" Text="{Binding Track_id}"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!--#region Form-->
+
+
+
+            <!--#endregion Form-->
+
+            <Button Text="Back" Command="{Binding toMainCommand}" Margin="5,5,15,5"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

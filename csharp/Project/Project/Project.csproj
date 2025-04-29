@@ -71,6 +71,9 @@
 	  <MauiXaml Update="RentsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="TrackDaysPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="TracksPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

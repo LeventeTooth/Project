@@ -16,6 +16,9 @@
     <MauiXaml Update="RentsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="TrackDaysPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="TracksPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
