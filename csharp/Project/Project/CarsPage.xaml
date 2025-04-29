@@ -3,8 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Project.CarsPage"
              Title="CarsPage">
-    
-    
+
+    <ScrollView>
+        <StackLayout>
+
+            <CollectionView ItemsSource="{Binding Cars}" Margin="5">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="DarkCyan" Margin="3">
+                        <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*" Margin="5" >
+                            <Label Grid.Column="0" Text="{Binding License_plate}"/>
+                            <Label Grid.Column="1" Text="{Binding Model}"/>
+                            <Label Grid.Column="2" Text="{Binding Price}"/>
+                            <Label Grid.Column="3" Text="{Binding Power}"/>
+                        </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <!--#region Form-->
+            
+            
+            <!--#endregion Form-->
+
+            <Button Text="Back" Command="{Binding toMainCommand}" Margin="5,5,15,5"/>
+        </StackLayout>
+    </ScrollView>
     
     
 </ContentPage>
