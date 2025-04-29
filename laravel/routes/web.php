@@ -14,7 +14,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/events', [EventController::class, 'index']);
+Route::get('events', [EventController::class, 'index'])->name('events.index');
 
 Route::resource('/cars', CarController::class);
 
