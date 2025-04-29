@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-04-29T10:19:01.945</Modified>
+      <Modified>2025-04-29T11:05:37.928</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\Project.dll">
       <PackagePath>Project.dll</PackagePath>
-      <Modified>2025-04-29T10:19:00.761</Modified>
+      <Modified>2025-04-29T11:05:37.083</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Project.exe</PackagePath>
-      <Modified>2025-04-29T10:19:00.802</Modified>
+      <Modified>2025-04-29T11:05:37.124</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kispr\OneDrive\developer\WORKPLACE\Project\Project\csharp\Project\Project\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
