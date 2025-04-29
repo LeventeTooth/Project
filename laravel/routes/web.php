@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\RentController;
 use App\Http\Controllers\TrackController;
@@ -13,13 +14,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/events', function () {
-    return view('events');
-})->name("events");
-
-Route::get('/calendar', function () {
-    return view('calendar');
-})->name("calendar");
+Route::get('/events', [EventController::class, 'index']);
 
 Route::resource('/cars', CarController::class);
 

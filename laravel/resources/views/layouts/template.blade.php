@@ -58,7 +58,7 @@
                             <div class="hidden md:block border-l border-white h-8"></div>
                             <a href="{{route('cars.index')}}" class="text-white text-xl px-4">Autok</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
-                            <a href="{{route('events')}}" class="text-white text-xl px-4">Események</a>
+                            <a href="{{route('events.index')}}" class="text-white text-xl px-4">Események</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
                             <a href="{{route('groups.index')}}" class="text-white text-xl px-4">Csapatok</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
@@ -73,7 +73,7 @@
                                 <a href="{{route('main')}}" class="text-white text-lg block">Főoldal</a>
                                 <a href="{{route('tracks.index')}}" class="text-white text-lg block">Pálya</a>
                                 <a href="{{route('cars.index')}}" class="text-white text-lg block">Autok</a>
-                                <a href="{{route('events')}}" class="text-white text-lg block">Események</a>
+                                <a href="{{route('events.index')}}" class="text-white text-lg block">Események</a>
                                 <a href="{{route('groups.index')}}" class="text-white text-lg block">Csapatok</a>
                                 <a href="{{route('pictures')}}" class="text-white text-lg block">Képek</a>
                             </div>
