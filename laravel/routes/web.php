@@ -15,13 +15,13 @@ Route::get('/', function () {
 
 Route::get('/tracks', [TrackController::class, 'index']);
 
-Route::get('/cars', [TrackController::class, 'index']);
+Route::get('/cars', [CarController::class, 'index']);
 
 Route::get('/events', function () {
     return view('events');
 })->name("events");
 
-Route::get('/groups', [TrackController::class, 'index']);
+Route::get('/groups', [GroupController::class, 'index']);
 
 Route::get('/pictures', function () {
     return view('pictures');

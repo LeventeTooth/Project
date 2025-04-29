@@ -36,7 +36,6 @@ class RentController extends Controller
         $validator = Validator::make($request->all(), 
         [
             'user_id' => 'required|integer',
-            'track_id' => 'required|integer',
             'car_id' => 'required|integer',
             'rent_time' => 'required|date'
         ]);
@@ -99,7 +98,6 @@ class RentController extends Controller
         $validator = Validator::make($request->all(), 
         [
             'user_id' => 'required|integer',
-            'track_id' => 'required|integer',
             'car_id' => 'required|integer',
             'rent_time' => 'required|date',
         ]);
