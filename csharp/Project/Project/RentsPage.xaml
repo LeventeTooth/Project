@@ -4,4 +4,32 @@
              x:Class="Project.RentsPage"
              Title="RentsPage">
     
+    <ScrollView>
+        <StackLayout>
+
+            <CollectionView ItemsSource="{Binding Rents}" Margin="5">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Background="DarkCyan" Margin="3">
+                            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*" Margin="5" >
+                                <Label Grid.Column="0" Text="{Binding User_id}"/>
+                                <Label Grid.Column="1" Text="{Binding Track_id}"/>
+                                <Label Grid.Column="2" Text="{Binding Car_id}"/>
+                                <Label Grid.Column="3" Text="{Binding Rent_date_time}"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <!--#region Form-->
+
+
+
+            <!--#endregion Form-->
+
+            <Button Text="Back" Command="{Binding toMainCommand}" Margin="5,5,15,5"/>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>

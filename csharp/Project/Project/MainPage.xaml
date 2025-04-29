@@ -55,7 +55,7 @@
         <Border Padding="2" BackgroundColor="#3B2E58" Grid.Row="1" Grid.Column="1" Margin="5">
             <StackLayout Margin="2" Padding="2">
                 <Label Text="Manage Rents" Margin="0,0,0,25" FontSize="Large"/>
-                <Button Text="Take Me there" IsEnabled="{Binding IsAuthed}" Command="{Binding toTracksCommand}"/>
+                <Button Text="Take Me there" IsEnabled="{Binding IsAuthed}" Command="{Binding toRentsCommand}"/>
 
             </StackLayout>
         </Border>
