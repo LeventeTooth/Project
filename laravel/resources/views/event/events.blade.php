@@ -8,7 +8,7 @@
         @foreach ($events as $event)
             <div class="p-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
                 <a href="#">
-                    <img class="rounded-t-lg" src="{{ $event->img }}" alt="" />
+                    <img class="rounded-lg" src="{{ $event->img }}" alt="" />
                 </a>
                 <div class="p-5">
                     <a href="#">
