@@ -1,9 +1,8 @@
 @extends('layouts.template')
 
-@section('title', 'Regisztarcio')
+@section('title', 'Regisztráció')
 
 @section('content')
-
 
     <div class="min-h-screen flex items-center justify-center">
         <form class="bg-stone-300 p-8 rounded-lg shadow-lg space-y-4 w-full max-w-md" method="POST"
@@ -17,7 +16,7 @@
             <input type="text" name="username" placeholder="Felhasználónév"
                 class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500" />
 
-            <input type="email" name="email" placeholder="Email"
+            <input type="email" name="email" placeholder="E-mail"
                 class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500" />
 
             <input type="password" name="password" placeholder="Jelszó"
@@ -33,16 +32,14 @@
             <input type="number" name="age" placeholder="Kor"
                 class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-gray-500" />
 
-
             <button type="submit"
                 class="w-full py-2 px-4 rounded border-2 bg-green-500 text-white border-white hover:bg-green-600 duration-700 transition">
                 Regisztráció
             </button>
 
-
             <a href="{{ route('auth.index') }}" type="button"
                 class="w-full text-sm text-stone-700 underline hover:text-green-600 duration-700 transition">
-                Már van fiókom, Bejelentkezem
+                Már van fiókom, bejelentkezem
             </a>
         </form>
     </div>

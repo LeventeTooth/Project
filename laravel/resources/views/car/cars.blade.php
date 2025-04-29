@@ -1,12 +1,12 @@
 @extends('layouts.template')
 
-@section('title', 'Autok')
+@section('title', 'Autóink')
 
 @section('content')
 
     <div class="show-event-item">
-        <h1 class="text-5xl mt-10">Autoink</h1>
-        <div class="mt-5 pt-5 flex flex-wrap justify-center ">
+        <h1 class="text-5xl mt-10">Autóink</h1>
+        <div class="mt-5 pt-5 flex flex-wrap justify-center">
             @foreach ($cars as $car)
                 <div class="mx-6 mt-6 p-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
                     <div class="w-full aspect-video overflow-hidden rounded-lg bg-gray-200">
@@ -22,6 +22,5 @@
             @endforeach
         </div>
     </div>
-
 
 @endsection

@@ -1,11 +1,11 @@
 @extends('layouts.template')
 
-@section('title', 'Palyak')
+@section('title', 'Pályák')
 
 @section('content')
 
     <div class="show-event-item">
-        <h1 class="text-5xl mt-10">Palyaink</h1>
+        <h1 class="text-5xl mt-10">Pályáink</h1>
         <div class="mt-5 pt-5 flex flex-wrap justify-center ">
             @foreach ($tracks as $track)
                 <div class="mx-6 mt-6 p-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
@@ -21,6 +21,5 @@
             @endforeach
         </div>
     </div>
-
 
 @endsection
