@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Validator;
 use App\Models\Rent;
 use App\Models\Event;
 use App\Models\Car;
 use App\Http\Requests\StoreRentRequest;
 use App\Http\Requests\UpdateRentRequest;
+use function Laravel\Prompts\error;
 
 class RentController extends Controller
 {
@@ -35,7 +37,31 @@ class RentController extends Controller
      */
     public function store(StoreRentRequest $request)
     {
-        //
+        $validator = Validator::make($request->all(), 
+        [
+            'user_id' => 'required|integer',
+            'car_id' => 'required|integer',
+            'rent_time' => 'required|string',
+            'event_id' => 'required|integer'
+        ]);
+        
+        if($validator->fails()){
+            return error('Rent creating failed in validation.');
+        }
+        else{
+            Rent::create($request->all());
+
+            session([
+                'rent_data' => [
+                    'car_id' => $request['car_id'],
+                    'event_id' => $request['event_id'],
+                    'user_id' => $request['user_id'],
+                    'rent_time' => $request['rent_time'],
+                ]
+            ]);
+
+            return redirect()->route('rents.thankYouPage');
+        }
     }
 
     /**
@@ -68,5 +94,11 @@ class RentController extends Controller
     public function destroy(Rent $rent)
     {
         //
+    }
+
+    public function thankYouPage()  
+    {
+        $rent_data = session('rent_data');
+        return view('rent.thankYouPage', ['rent_data'=>$rent_data]);
     }
 }
