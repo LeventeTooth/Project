@@ -11,4 +11,11 @@ class Car extends Model
     /** @use HasFactory<\Database\Factories\CarFactory> */
     use HasFactory;
     use SoftDeletes;
+
+    protected $fillable = [
+        'license_plate',
+        'model',
+        'price',
+        'power',
+    ];
 }
