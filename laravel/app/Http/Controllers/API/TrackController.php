@@ -37,6 +37,7 @@ class TrackController extends Controller
             'name' => 'required|string',
             'location' => 'required|string',
             'price' => 'required|integer',
+            'img' => 'required|string'
         ]);
         
         if($validator->fails()){
@@ -99,6 +100,7 @@ class TrackController extends Controller
             'name' => 'required|string',
             'location' => 'required|string',
             'price' => 'required|integer',
+            'img' => 'required|string'
         ]);
         
         if($validator->fails()){

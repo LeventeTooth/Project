@@ -16,7 +16,8 @@ class Track extends Model
     protected $fillable = [
         'name',
         'location',
-        'price'
+        'price',
+        'img'
     ];
 
     public function event() : HasMany {
