@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\controller\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\controller\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\controller\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\model\\rent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\model\\rent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -42,7 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "MainController.cs",
+              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\MainController.cs",
+              "RelativeDocumentMoniker": "Project\\Controller\\MainController.cs",
+              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\MainController.cs",
+              "RelativeToolTip": "Project\\Controller\\MainController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-29T08:47:18.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Rent.cs",
               "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Model\\Rent.cs",
               "RelativeDocumentMoniker": "Project\\Model\\Rent.cs",
@@ -55,41 +64,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainController.cs",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\MainController.cs",
-              "RelativeDocumentMoniker": "Project\\Controller\\MainController.cs",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\MainController.cs",
-              "RelativeToolTip": "Project\\Controller\\MainController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:49:43.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml",
               "RelativeDocumentMoniker": "Project\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml*",
-              "RelativeToolTip": "Project\\MainPage.xaml*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAQAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml",
+              "RelativeToolTip": "Project\\MainPage.xaml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-28T10:01:51.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthenticationController.cs",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\AuthenticationController.cs",
-              "RelativeDocumentMoniker": "Project\\Controller\\AuthenticationController.cs",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\AuthenticationController.cs",
-              "RelativeToolTip": "Project\\Controller\\AuthenticationController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:51:33.039Z",
               "EditorCaption": ""
             }
           ]

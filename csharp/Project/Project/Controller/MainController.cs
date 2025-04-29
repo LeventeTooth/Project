@@ -13,15 +13,21 @@ using System.Threading.Tasks;
 
 namespace Project.Controller
 {
-    public partial class MainController: ObservableObject
+    public partial class MainController : ObservableObject
     {
         [ObservableProperty]
-        private string userEmail;
+        private string userEmailA;
 
         [ObservableProperty]
-        private string text;
+        private string authRespText;
 
-        
+        [ObservableProperty]
+        private User currentSelectedUser;
+
+        //public ObservableCollection<User> Users;
+        [ObservableProperty]
+        private List<User> users;
+
 
         private ApiCaller<User> api;
         private AuthenticationController auth;
@@ -30,19 +36,29 @@ namespace Project.Controller
         [RelayCommand]
         async void run()
         {
-            var isAuthed =await  auth.Auth(UserEmail);
+            var isAuthed = await auth.Auth(UserEmailA);
             if (isAuthed)
             {
-                Text = "Siker";
+                AuthRespText = "Siker";
+                Users = await api.Get();
+
+                //foreach (var u in users)
+                //{
+                    //Users.Add(u);
+                //}
                 
+                AuthRespText = $"Krv+ {Users.Count}";
+
+
             }
-            else { Text = "Not Authorized"; }
+            else { AuthRespText = "Not Authorized"; }
         }
 
         public MainController()
         {
-            api = new ApiCaller<User>("http://127.0.0.1:8000/api/","user");
+            api = new ApiCaller<User>("http://127.0.0.1:8000/api/", "user");
             auth = new AuthenticationController();
+            //Users = new ObservableCollection<User>();
         }
     }
 }
