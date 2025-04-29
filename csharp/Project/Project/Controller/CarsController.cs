@@ -24,16 +24,18 @@ namespace Project.Controller
         private string currentPower;
         [ObservableProperty]
         private string currentImg;
-
         [ObservableProperty]
         private int?  currentId;
+        private bool isModify;
+
+
 
         [ObservableProperty]
         private List<Car> cars;
 
         private ApiCaller<Car> api;
 
-        private bool isModify;
+        
 
         async void Call()
         {

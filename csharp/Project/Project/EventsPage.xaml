@@ -7,14 +7,22 @@
     <ScrollView>
         <StackLayout>
 
-            <CollectionView ItemsSource="{Binding Events}" Margin="5">
+            <CollectionView ItemsSource="{Binding Events}" Margin="5" x:Name="cw">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border Background="DarkCyan" Margin="3">
-                            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*" Margin="5" >
+                            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*,*,*" Margin="5" >
                                 <Label Grid.Column="0" Text="{Binding Name}"/>
                                 <Label Grid.Column="1" Text="{Binding Date}"/>
                                 <Label Grid.Column="2" Text="{Binding TrackName}"/>
+
+                                <Button Text="Modify" BackgroundColor="#D2B200" Grid.Column="3" 
+                                    Command="{Binding BindingContext.modifyCommand, Source={x:Reference cw }}" 
+                                    CommandParameter="{Binding Id}"/>
+
+                                <Button Text="Delete" BackgroundColor="Red" Grid.Column="4"
+                                    Command="{Binding BindingContext.deleteCommand, Source={x:Reference cw}}"
+                                    CommandParameter="{Binding Id}"/>
                             </Grid>
                         </Border>
                     </DataTemplate>
@@ -23,7 +31,23 @@
 
             <!--#region Form-->
 
+            <Grid RowDefinitions="*,*,*,*" ColumnDefinitions="*,*" Margin="0,20" Padding="4">
+                <Entry Margin="3" x:Name="Name" Placeholder="Enter Events's Name" 
+                    Grid.Row="0" Grid.Column="0" Text="{Binding CurrentName}"/>
+                <Entry Margin="3" x:Name="Location" Placeholder="Enter Date" 
+                    Grid.Row="0" Grid.Column="1" Text="{Binding CurrentDate}"/>
+                
+                <Picker Margin="3" x:Name="Price"  
+                    Grid.Row="1" Grid.Column="0" ItemsSource="{Binding Tracks}" 
+                        ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding CurrentTrack}"/>
+                
+                <Entry Margin="3" x:Name="Image" Placeholder="Enter Image Address" 
+                    Grid.Row="1" Grid.Column="1" Text="{Binding CurrentImg}"/>
 
+                <Button Margin="3" Text="Enter" Grid.Row="3" Grid.Column="0" 
+            Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
+            Command="{Binding addCommand}"/>
+            </Grid>
 
             <!--#endregion Form-->
 

@@ -19,7 +19,7 @@
                                 <Button Text="Modify" BackgroundColor="#D2B200" Grid.Column="4" 
                                         Command="{Binding BindingContext.modifyCommand, Source={x:Reference cw }}" 
                                         CommandParameter="{Binding Id}"/>
-                                <!--CommandParameter="{Binding Id}"-->
+                                
                                 <Button Text="Delete" BackgroundColor="Red" Grid.Column="5"
                                         Command="{Binding BindingContext.deleteCommand, Source={x:Reference cw}}"
                                         CommandParameter="{Binding Id}"/>
