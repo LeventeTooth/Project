@@ -35,3 +35,4 @@ Route::get('/register', [App\Http\Controllers\HomeController::class, 'index'])->
 
 
 Route::resource('/rents', RentController::class);
+Route::get('/rents/create/{event}/{car}', [RentController::class, 'createRent'])->name('rents.createRent');

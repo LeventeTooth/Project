@@ -24,7 +24,7 @@
                         <p class="mb-3 font-normal text-gray-700 ">{{ $car->power }}</p>
                         <h3 class="mt-5 mb-6 text-xl font-bold tracking-tight text-gray-900 ">{{ $car->price }}
                             Ft</h3>
-                        <a href="{{ route('rents.create', $event, $car) }}"
+                        <a href="{{ route('rents.createRent', [$event, $car]) }}"
                             class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
                             Foglalás
                             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
