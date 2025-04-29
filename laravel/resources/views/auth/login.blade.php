@@ -1,73 +1,42 @@
-@extends('layouts.app')
+@extends('layouts.template')
+
+@section('title', 'Belepes')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+    <div class="flex items-center justify-center min-h-[calc(100vh-260px)] bg-cover bg-center">
+        <form class="bg-stone-300 p-8 rounded-lg shadow-lg space-y-6" method="POST" action="{{ route('auth.login') }}">
+            @csrf
+            @if(session('success'))
+                <p class="bg-green-200 text-green-900 border-2 rounded border-green-900 text-center p-3">{{ session('success') }}  <br> Profilomnal lehet csapatot valasztani</p>
+            @endif
+            <h2 class="text-2xl font-bold text-center text-stone-700">Bejelentkezes</h2>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div>
+                <label for="username" class="block text-sm font-medium text-stone-700">Felhasznalonev</label>
+                <input type="text" id="username" name="username"
+                    class="w-full mt-1 p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
             </div>
-        </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium text-stone-700">Jelszó</label>
+                <input type="password" id="password" name="password"
+                    class="w-full mt-1 p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
+            </div>
+
+            <button type="submit"
+                class="w-full py-2 px-4 rounded border-2 bg-green-500 text-white border-white hover:bg-green-600 transition duration-700">
+                Belépés
+            </button>
+            <a href="{{ route('auth.create') }}" type="button"
+                class="text-sm text-stone-700 underline hover:text-green-600 duration-700 transition">
+                Nincs még fiókom, Regisztrálok
+            </a>
+        </form>
     </div>
-</div>
+
 @endsection
