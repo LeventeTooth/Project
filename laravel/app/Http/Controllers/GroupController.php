@@ -14,7 +14,7 @@ class GroupController extends Controller
     public function index()
     {
         $groups = Group::all();
-        return view('groups', ['groups' => $groups]);
+        return view('group.groups', ['groups' => $groups]);
     }
 
     /**
@@ -22,7 +22,7 @@ class GroupController extends Controller
      */
     public function create()
     {
-        return view('createGroup');
+        return view('group.createGroup');
     }
 
     /**

@@ -16,7 +16,7 @@ class AuthController extends Controller
     public function index()
     {
 
-        return view('login');
+        return view('auth.login');
     }
 
     public function logout()
@@ -29,7 +29,7 @@ class AuthController extends Controller
     {
         $userId = Auth::id();
         $user = User::find($userId);
-        return view('account', ['user' => $user]);
+        return view('auth.account', ['user' => $user]);
     }
 
     public function login(Request $request)
@@ -54,7 +54,7 @@ class AuthController extends Controller
     public function create()
     {
         $groups = Group::all();
-        return view('register', ['groups' => $groups]);
+        return view('auth.register', ['groups' => $groups]);
     }
 
 
