@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\API;
 
 use Validator;
-use App\Models\Group;
+use App\Models\Event;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreGroupRequest;
-use App\Http\Requests\UpdateGroupRequest;
+use App\Http\Requests\StoreEventRequest;
+use App\Http\Requests\UpdateEventRequest;
 
-class GroupController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -29,7 +29,7 @@ class GroupController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreGroupRequest $request)
+    public function store(StoreEventRequest $request)
     {
         //
     }
@@ -37,7 +37,7 @@ class GroupController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Group $group)
+    public function show(Event $event)
     {
         //
     }
@@ -45,7 +45,7 @@ class GroupController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Group $group)
+    public function edit(Event $event)
     {
         //
     }
@@ -53,7 +53,7 @@ class GroupController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateGroupRequest $request, Group $group)
+    public function update(UpdateEventRequest $request, Event $event)
     {
         //
     }
@@ -61,7 +61,7 @@ class GroupController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Group $group)
+    public function destroy(Event $event)
     {
         //
     }
