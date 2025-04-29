@@ -17,7 +17,7 @@ class GroupSeeder extends Seeder
             'title'=>'Nincs'
         ]);
         Group::create([
-            'title'=>'BromoTeam'
+            'title'=>'Bromo Team'
         ]);
     }
 }

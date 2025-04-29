@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             TrackSeeder::class,
             CarSeeder::class,
+            EventSeeder::class,
             RentSeeder::class
         ]);
     }

@@ -13,9 +13,5 @@ Route::get('/user', function (Request $request) {
     return response()->json(User::all());
 });
 
-
-//Rent api
 Route::resource("/rent", RentController::class);
-
-//Car api
 Route::resource("/car", CarController::class);

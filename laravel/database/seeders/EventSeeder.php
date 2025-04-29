@@ -2,21 +2,21 @@
 
 namespace Database\Seeders;
 
-use App\Models\Track;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Event;
 
-class TrackSeeder extends Seeder
+class EventSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        Track::create([
-            'name'=>'Kralka drift',
-            'location'=>'Kralka',
-            'price'=>6000
+        Event::create([
+            'name'=>'Nyári Kralka',
+            'date'=>'2025-06-21',
+            'track_id'=>1
         ]);
     }
 }
