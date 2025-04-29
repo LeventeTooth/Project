@@ -54,8 +54,9 @@ class User extends Authenticatable
         ];
     }
 
-    public function group()
+    public function groups()
     {
         return $this->belongsTo(Group::class);
     }
+    
 }
