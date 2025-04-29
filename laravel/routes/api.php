@@ -26,6 +26,6 @@ Route::get('/groups', function () {
 });
 
 
-//Kesz api
+//Rent api
 Route::get('/rents', [RentController::class, 'index']);
 Route::post('/rents/store', [RentController::class, 'store']);
