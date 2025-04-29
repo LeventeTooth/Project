@@ -15,7 +15,7 @@ class TrackSeeder extends Seeder
     {
         Track::create([
             'name'=>'drift',
-            'location'=>'Kalkla',
+            'location'=>'Kralka',
             'price'=>6000
         ]);
     }
