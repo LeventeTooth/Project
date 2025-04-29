@@ -17,7 +17,25 @@ class TrackSeeder extends Seeder
             'name'=>'Kralka drift',
             'location'=>'Kralka',
             'price'=>6000,
-            'img'=>'kralka_img'
+            'img'=>'images\kralka_track.jpg'
+        ]);
+        Track::create([
+            'name'=>'Kralka drift',
+            'location'=>'Kralka',
+            'price'=>6000,
+            'img'=>'images\kralka_track.jpg'
+        ]);
+        Track::create([
+            'name'=>'Kralka drift',
+            'location'=>'Kralka',
+            'price'=>6000,
+            'img'=>'images\kralka_track.jpg'
+        ]);
+        Track::create([
+            'name'=>'Kralka drift',
+            'location'=>'Kralka',
+            'price'=>6000,
+            'img'=>'images\kralka_track.jpg'
         ]);
     }
 }
