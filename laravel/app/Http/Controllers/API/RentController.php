@@ -16,7 +16,8 @@ class RentController extends Controller
     public function index()
     {
         $rents = Rent::all();
-        return response()->json($rents);
+
+        return response()->json($rents, 200);
     }
 
     /**
@@ -133,6 +134,25 @@ class RentController extends Controller
      */
     public function destroy(Rent $rent)
     {
-        //
+        $rentToDelete = Rent::find($rent->id);
+
+        if($rentToDelete == null){
+            $data = [
+                'status' => 404,
+                'message' => 'Rent with this id not found.'
+            ];
+
+            return response()->json($data,404);
+        } 
+        else{
+            $rentToDelete->delete();
+
+            $data = [
+                'status' => 200,
+                'message' => 'Rent deleted successfully.'
+            ];
+
+            return response()->json($data,200);
+        }
     }
 }
