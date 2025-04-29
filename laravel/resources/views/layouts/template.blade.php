@@ -23,8 +23,19 @@
                         @else
                             Belepes
                         @endif</a>
-                    <a href="{{ route('auth.create') }}"
-                        class="bg-green-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-green-600 hover:border-stone-400 transition duration-700">Regisztracio</a>
+                    @guest
+                        <a href="{{ route('auth.create') }}"
+                            class="bg-green-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-green-600 hover:border-stone-400 transition duration-700">Regisztracio</a>
+                    @endguest
+                    @auth
+                    <form method="POST" action="{{ route('auth.logout') }}" class="inline">
+                @csrf
+                <button type="submit" class="bg-red-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-red-600 hover:border-stone-400 transition duration-700">
+                    Kijelentkezés
+                </button>
+            </form>
+                    @endauth
+
                 </div>
 
                 <!-- picture line grid -->
