@@ -16,7 +16,8 @@ class EventSeeder extends Seeder
         Event::create([
             'name'=>'Nyári Kralka',
             'date'=>'2025-06-21',
-            'track_id'=>1
+            'track_id'=>1,
+            'img'=>'images\nyari-kralka.jpg'
         ]);
     }
 }

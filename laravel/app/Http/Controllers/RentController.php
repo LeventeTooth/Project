@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rent;
+use App\Models\Event;
+use App\Models\Car;
 use App\Http\Requests\StoreRentRequest;
 use App\Http\Requests\UpdateRentRequest;
 
@@ -13,15 +15,15 @@ class RentController extends Controller
      */
     public function index()
     {
-        dd(Rent::all());
+        //
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Event $event, Car $car)
     {
-        //
+        return view('rent.createRent', ['event'=>$event, 'car'=>$car]);
     }
 
     /**

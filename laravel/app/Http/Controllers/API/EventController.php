@@ -37,6 +37,7 @@ class EventController extends Controller
             'name' => 'required|string',
             'date' => 'required|date',
             'track_id' => 'required|integer',
+            'img' => 'string'
         ]);
         
         if($validator->fails()){
@@ -99,6 +100,7 @@ class EventController extends Controller
             'name' => 'required|string',
             'date' => 'required|date',
             'track_id' => 'required|integer',
+            'img' => 'string'
         ]);
         
         if($validator->fails()){

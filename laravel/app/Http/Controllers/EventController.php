@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\Car;
 use App\Http\Requests\StoreEventRequest;
 use App\Http\Requests\UpdateEventRequest;
 
@@ -13,7 +14,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('event.events');
+        $events = Event::all();
+        return view('event.events', ['events' => $events]);
     }
 
     /**
@@ -37,7 +39,8 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        $cars = Car::all();
+        return view('event.showEvent', ['event'=>$event, 'cars'=>$cars]);
     }
 
     /**

@@ -37,7 +37,8 @@ class CarController extends Controller
             'license_plate' => 'required|string',
             'model' => 'required|string',
             'price' => 'required|integer',
-            'power' => 'required|string'
+            'power' => 'required|string',
+            'img' => 'string'
         ]);
         
         if($validator->fails()){
@@ -100,7 +101,8 @@ class CarController extends Controller
             'license_plate' => 'required|string',
             'model' => 'required|string',
             'price' => 'required|integer',
-            'power' => 'required|string'
+            'power' => 'required|string',
+            'img' => 'string'
         ]);
         
         if($validator->fails()){

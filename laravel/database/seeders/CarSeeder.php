@@ -17,7 +17,8 @@ class CarSeeder extends Seeder
             'license_plate'=>'NRT-369',
             'model'=>'BMW E36',
             'price'=>900000,
-            'power'=>'170le / 245nm'
+            'power'=>'170le / 245nm',
+            'img'=>'images\e36-compact-23i.jpg'
         ]);
     }
 }

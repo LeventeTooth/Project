@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->date('date');
             $table->foreignId("track_id")->constrained("tracks", "id");
+            $table->string('img');
             $table->timestamps();
             $table->softDeletes();
         });
