@@ -34,6 +34,6 @@ Route::resource('/groups', GroupController::class);
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'index'])->name('register');
 
 
-Route::resource('/rents', RentController::class);
 Route::get('/rents/create/{event}/{car}', [RentController::class, 'createRent'])->name('rents.createRent');
 Route::get('/rents/thank-you-page', [RentController::class, 'thankYouPage'])->name('rents.thankYouPage');
+Route::resource('/rents', RentController::class);

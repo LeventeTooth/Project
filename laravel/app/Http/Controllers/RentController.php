@@ -99,6 +99,11 @@ class RentController extends Controller
     public function thankYouPage()  
     {
         $rent_data = session('rent_data');
-        return view('rent.thankYouPage', ['rent_data'=>$rent_data]);
+        if (!$rent_data || !isset($rent_data['event_id'], $rent_data['car_id'], $rent_data['rent_time'])) {
+            abort(404, 'Szükséges foglalási adatok nem találhatók a session-ben.');
+        }
+        $event = Event::find($rent_data['event_id']);
+        $car = Car::find($rent_data['car_id']);
+        return view('rent.thankYouPage', ['event'=>$event, 'car'=>$car, 'rent_time'=>$rent_data['rent_time']]);
     }
 }
