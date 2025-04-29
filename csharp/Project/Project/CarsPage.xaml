@@ -23,7 +23,26 @@
             </CollectionView>
             
             <!--#region Form-->
-            
+
+            <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*" Margin="0,20" Padding="4">
+                <Entry Margin="3" x:Name="LicensePlate" Placeholder="Enter License Plate" 
+                       Grid.Row="0" Grid.Column="0" Text="{Binding CurrentPlate}"/>
+                <Entry Margin="3" x:Name="Model" Placeholder="Enter Model" 
+                       Grid.Row="0" Grid.Column="1" Text="{Binding CurrentModel}"/>
+                <Entry Margin="3" x:Name="Price" Placeholder="Enter Price" 
+                       Grid.Row="1" Grid.Column="0" Text="{Binding CurrentPrice}"/>
+                <Entry Margin="3" x:Name="Power" Placeholder="Enter Power" 
+                       Grid.Row="1" Grid.Column="1" Text="{Binding CurrentPower}"/>
+                <Button Margin="3" Text="Enter" Grid.Row="2" Grid.Column="0" 
+                        Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center"
+                        Command="{Binding addCommand}"/>
+            </Grid>
+            <StackLayout>
+                <Label Text="{Binding CurrentPlate}"/>
+                <Label Text="{Binding CurrentModel}"/>
+                <Label Text="{Binding CurrentPrice}"/>
+                <Label Text="{Binding CurrentPower}"/>
+            </StackLayout>
             
             
             <!--#endregion Form-->
