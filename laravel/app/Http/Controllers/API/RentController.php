@@ -38,7 +38,7 @@ class RentController extends Controller
             'user_id' => 'required|integer',
             'track_id' => 'required|integer',
             'car_id' => 'required|integer',
-            'rent_date_time' => 'required|date',
+            'rent_time' => 'required|date'
         ]);
         
         if($validator->fails()){
@@ -101,7 +101,7 @@ class RentController extends Controller
             'user_id' => 'required|integer',
             'track_id' => 'required|integer',
             'car_id' => 'required|integer',
-            'rent_date_time' => 'required|date',
+            'rent_time' => 'required|date',
         ]);
         
         if($validator->fails()){

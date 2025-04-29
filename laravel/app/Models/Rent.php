@@ -17,6 +17,6 @@ class Rent extends Model
         'user_id',
         'track_id',
         'car_id',
-        'rent_date_time',
+        'rent_time',
     ];
 }
