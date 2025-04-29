@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             GroupSeeder::class,
             UserSeeder::class,
             TrackSeeder::class,
+            TrackDaySeeder::class,
             CarSeeder::class,
             RentSeeder::class
         ]);
