@@ -11,20 +11,20 @@
       "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\controller\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\trackdayspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\trackdayspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\carspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\carspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\controller\\trackdayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\controller\\trackdayscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\carspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\carspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\trackdayspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\trackdayspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,9 +54,9 @@
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml",
               "RelativeDocumentMoniker": "Project\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml",
-              "RelativeToolTip": "Project\\MainPage.xaml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEIAAABmAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\MainPage.xaml*",
+              "RelativeToolTip": "Project\\MainPage.xaml*",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-29T13:43:55.597Z",
               "EditorCaption": ""
@@ -76,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\AppShell.xaml",
               "RelativeDocumentMoniker": "Project\\AppShell.xaml",
@@ -89,33 +89,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "CarsPage.xaml",
               "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\CarsPage.xaml",
               "RelativeDocumentMoniker": "Project\\CarsPage.xaml",
               "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\CarsPage.xaml",
               "RelativeToolTip": "Project\\CarsPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAIwAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwA0AAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-29T13:40:59.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TrackDaysController.cs",
               "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\TrackDaysController.cs",
               "RelativeDocumentMoniker": "Project\\Controller\\TrackDaysController.cs",
               "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\TrackDaysController.cs",
               "RelativeToolTip": "Project\\Controller\\TrackDaysController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T13:37:06.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "TrackDaysPage.xaml",
               "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\TrackDaysPage.xaml",
               "RelativeDocumentMoniker": "Project\\TrackDaysPage.xaml",
