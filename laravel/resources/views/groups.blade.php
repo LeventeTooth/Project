@@ -7,7 +7,7 @@
     <div class="hidden md:block">
         <div class="flex justify-center mt-5">
 
-            <a href="{{ route('group.create') }}"
+            <a href="{{ route('groups.create') }}"
                 class="w-[35%] py-2 px-4 rounded border-2 bg-blue-500 text-white border-white hover:bg-blue-600 duration-700 transition text-center block">
                 Új Csapat
             </a>
@@ -26,7 +26,7 @@
     <div class="md:hidden">
         <div class="flex justify-center mt-5">
 
-            <a href="{{ route('group.create') }}"
+            <a href="{{ route('groups.create') }}"
                 class="w-[70%] py-2 px-4 rounded border-2 bg-blue-500 text-white border-white hover:bg-blue-600 duration-700 transition text-center block">
                 Új Csapat
             </a>

@@ -43,7 +43,7 @@
                     @endforeach
                 </select>
 
-                <a href="{{ route('group.create') }}"
+                <a href="{{ route('groups.create') }}"
                     class="w-[30%] py-2 px-4 rounded border-2 bg-blue-500 text-white border-white hover:bg-blue-600 duration-700 transition text-center block">
                     Új Csapat
                 </a>
