@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
@@ -21,11 +21,11 @@
                         @if (Auth::check())
                             Profilom
                         @else
-                            Belepes
+                            Belépés
                         @endif</a>
                     @guest
                         <a href="{{ route('auth.create') }}"
-                            class="bg-green-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-green-600 hover:border-stone-400 transition duration-700">Regisztracio</a>
+                            class="bg-green-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-green-600 hover:border-stone-400 transition duration-700">Regisztráció</a>
                     @endguest
                     @auth
                     <form method="POST" action="{{ route('auth.logout') }}" class="inline">
@@ -67,7 +67,7 @@
                             <div class="hidden md:block border-l border-white h-8"></div>
                             <a href="{{route('tracks.index')}}" class="text-white text-xl px-4">Pálya</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
-                            <a href="{{route('cars.index')}}" class="text-white text-xl px-4">Autok</a>
+                            <a href="{{route('cars.index')}}" class="text-white text-xl px-4">Autók</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
                             <a href="{{route('events.index')}}" class="text-white text-xl px-4">Események</a>
                             <div class="hidden md:block border-l border-white h-8"></div>
@@ -83,7 +83,7 @@
                             <div class="space-y-4 mt-4">
                                 <a href="{{route('main')}}" class="text-white text-lg block">Főoldal</a>
                                 <a href="{{route('tracks.index')}}" class="text-white text-lg block">Pálya</a>
-                                <a href="{{route('cars.index')}}" class="text-white text-lg block">Autok</a>
+                                <a href="{{route('cars.index')}}" class="text-white text-lg block">Autók</a>
                                 <a href="{{route('events.index')}}" class="text-white text-lg block">Események</a>
                                 <a href="{{route('groups.index')}}" class="text-white text-lg block">Csapatok</a>
                                 <a href="{{route('pictures')}}" class="text-white text-lg block">Képek</a>

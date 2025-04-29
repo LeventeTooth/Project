@@ -1,12 +1,12 @@
 @extends('layouts.template')
 
-@section('title', 'Fooldal')
+@section('title', 'Főoldal')
 
 @section('content')
 
     <div class="item">
-        <h3 class="text-3xl">Kovetkezo esemeny:</h3>
-        <h1 class="text-5xl">Kralka Szezonindito: 04.05</h1>
+        <h3 class="text-3xl">Következő esemény:</h3>
+        <h1 class="text-5xl">Králka Szezonindító: 04.05</h1>
     </div>
 
     <div class="item">
@@ -39,7 +39,7 @@ A helyszínhez rendezvényszervezők és látogatók számára kialakított kül
         <div class="item">
             <h1 class="text-3xl">A PÁLYÁRÓL:</h1>
             <br>
-            <p style="font-size: samll;">
+            <p style="font-size: small;">
             A Králkai Drift Pálya egy sokoldalúan kialakított drift- és szórakoztató motorsport-komplexum, amely ideális választás mind a kezdő, mind a tapasztalt pilóták számára. A pálya vonalvezetése különféle kihívásokat rejt: technikás kanyarok, lendületes ívek és széles manőverezési lehetőségek biztosítják az élményt.
 
 A pályán több, hivatalosan kijelölt drift szakasz található, ahol legálisan és biztonságosan lehet gyakorolni a különböző drift technikákat. Ezek a részek kifejezetten úgy kerültek kialakításra, hogy lehetőséget adjanak mind a tanulásra, mind a látványos autókezelés bemutatására.

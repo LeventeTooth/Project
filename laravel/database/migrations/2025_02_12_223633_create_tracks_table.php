@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("name");
             $table->string("location");
             $table->integer("price");
-            $table->string("img");
+            $table->string("img")->default('https://cdn4.iconfinder.com/data/icons/ui-beast-4/32/Ui-12-512.png');
             $table->timestamps();
             $table->softDeletes();
 

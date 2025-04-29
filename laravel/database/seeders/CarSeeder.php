@@ -18,7 +18,7 @@ class CarSeeder extends Seeder
             'model'=>'BMW E36 Compact 323i',
             'price'=>70000,
             'power'=>'170le / 245nm',
-            'img'=>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK8JlcwsnBpqbCuJaYnxlNpaPe4q_SDcs0dw&s'
+            'img'=>'https://live.staticflickr.com/8250/8496602327_90c82cd202_b.jpg'
         ]);
         Car::create([
             'license_plate'=>'ABC-123',

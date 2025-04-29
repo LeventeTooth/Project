@@ -19,7 +19,7 @@
                     <td class="px-4 py-2">{{ $user->username }}</td>
                 </tr>
                 <tr class="border-b">
-                    <td class="px-4 py-2 font-semibold text-gray-700">Email</td>
+                    <td class="px-4 py-2 font-semibold text-gray-700">E-mail</td>
                     <td class="px-4 py-2">{{ $user->email }}</td>
                 </tr>
 
@@ -37,7 +37,7 @@
                 </tr>
                 <tr class="border-b">
                     <td class="px-4 py-2 font-semibold text-gray-700">Csapat</td>
-                    <td class="px-4 py-2">{{ $user->group->title ?? 'Meg nincs csapatom'}}</td>
+                    <td class="px-4 py-2">{{ $user->group->title ?? 'Még nincs csapatom'}}</td>
                 </tr>
                 <tr class="border-b">
                     <td class="px-4 py-2 font-semibold text-gray-700">Regisztráció dátuma</td>
@@ -49,7 +49,7 @@
         <div class="flex justify-between  space-x-4 mt-3">
             <a href="{{ route('auth.edit', $user->id) }}"
                 class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">
-                Adat módosítás
+                Adatmódosítás
             </a>
             <form method="POST" action="{{ route('auth.logout') }}" class="inline">
                 @csrf
@@ -61,7 +61,7 @@
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-md">
-                    Fiok torles
+                    Fiók törlés
                 </button>
             </form>
         </div>

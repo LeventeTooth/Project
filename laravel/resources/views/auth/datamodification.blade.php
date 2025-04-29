@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'AdatMódosítás')
+@section('title', 'Adatmódosítás')
 
 @section('content')
 
@@ -10,7 +10,7 @@
             @csrf
             @method('PUT')
 
-            <h2 class="text-2xl font-bold text-center text-stone-700">Adat módosítás</h2>
+            <h2 class="text-2xl font-bold text-center text-stone-700">Adatmódosítás</h2>
 
             <div>
                 <label for="name" class="block text-sm font-medium text-stone-700">Név</label>
@@ -25,7 +25,7 @@
             </div>
 
             <div>
-                <label for="email" class="block text-sm font-medium text-stone-700">Email</label>
+                <label for="email" class="block text-sm font-medium text-stone-700">E-mail</label>
                 <input type="email" id="email" name="email" value="{{ $user->email }}"
                     class="w-full p-2 rounded border border-stone-700 bg-stone-300 focus:outline-none focus:ring-2 focus:ring-green-500" />
             </div>
@@ -63,7 +63,7 @@
                     </select>
                     <a href="{{ route('groups.create') }}"
                     class="w-[35%] py-2 px-4 rounded border-2 bg-blue-500 text-white border-white hover:bg-blue-600 duration-700 transition text-center block">
-                    Új Csapat
+                    Új csapat
                 </a>
                 </div>
             </div>
