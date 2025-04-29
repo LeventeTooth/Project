@@ -17,8 +17,10 @@
         <div class="mt-5 pt-5 flex flex-wrap justify-center">
             @foreach ($cars as $car)
                 <div
-                    class="mt-8 p-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
-                    <img style="width: 100%;" class="rounded-lg" src="{{ asset( $car->img) }}" alt="" />
+                    class="mt-8 mx-6 p-5 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
+                    <div class="w-full aspect-video overflow-hidden rounded-lg bg-gray-200">
+                        <img class="rounded-lg h-full object-cover w-[400px]" src="{{ asset($car->img) }}" alt="" />
+                    </div>
                     <div class="p-5">
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $car->model }}</h5>
                         <p class="mb-3 font-normal text-gray-700 ">{{ $car->power }}</p>
