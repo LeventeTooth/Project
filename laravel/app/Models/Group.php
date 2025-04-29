@@ -12,7 +12,4 @@ class Group extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = [
-        'title',
-    ];
 }

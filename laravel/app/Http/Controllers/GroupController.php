@@ -13,7 +13,8 @@ class GroupController extends Controller
      */
     public function index()
     {
-        //
+        $groups = Group::all();
+        return view('groups', ['groups' => $groups]);
     }
 
     /**
@@ -21,7 +22,7 @@ class GroupController extends Controller
      */
     public function create()
     {
-        //
+        return view('createGroup');
     }
 
     /**
@@ -29,7 +30,16 @@ class GroupController extends Controller
      */
     public function store(StoreGroupRequest $request)
     {
-        //
+        $validated = $request->validate([
+            'title' => 'required|string|max:255',
+        ]);
+
+        Group::create([
+            'title' => $validated['title'],
+        ]);
+    
+        return redirect()->route('main')->with('success', 'Csapat sikeresen létrehozva!');
+
     }
 
     /**

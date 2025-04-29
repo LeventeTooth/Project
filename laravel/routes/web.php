@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\GroupController;
 use App\Http\Controllers\RentController;
 use App\Http\Controllers\TrackController;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +34,7 @@ Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
 Route::get('/my-profile', [AuthController::class, 'account'])->name('auth.account');
 Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
+Route::resource('/group', GroupController::class);
 
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'index'])->name('register');
 
