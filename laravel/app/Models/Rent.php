@@ -15,7 +15,8 @@ class Rent extends Model
 
     protected $fillable = [
         'user_id',
+        'track_id',
         'car_id',
-        'rent_time',
+        'rent_date_time',
     ];
 }

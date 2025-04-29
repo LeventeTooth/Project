@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('address');
             $table->date('birth_date');
             $table->integer('age');
-            $table->foreignId('group_id')->nullable()->constrained("groups","id");
+            $table->foreignId('group_id')->constrained("groups","id");
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

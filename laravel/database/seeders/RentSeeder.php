@@ -15,9 +15,9 @@ class RentSeeder extends Seeder
     {
         Rent::create([
             'user_id'=>1,
+            'track_id'=>1,
             'car_id'=>1,
-            'rent_time'=> "2000-01-01 10:30:00",
-            'track_day_id' => 1
+            'rent_date_time'=>"2025-04-05 10:30"
         ]);
     }
 }

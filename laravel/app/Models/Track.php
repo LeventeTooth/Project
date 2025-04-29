@@ -12,9 +12,4 @@ class Track extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $fillable = [
-        'name',
-        'location',
-        'price',
-    ];
 }

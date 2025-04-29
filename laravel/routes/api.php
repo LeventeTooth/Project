@@ -2,9 +2,6 @@
 
 use App\Http\Controllers\API\RentController;
 use App\Http\Controllers\API\CarController;
-use App\Http\Controllers\API\GroupController;
-use App\Http\Controllers\API\TrackController;
-use App\Http\Controllers\API\TrackDayController;
 use App\Models\Car;
 use App\Models\Group;
 use App\Models\Track;
@@ -29,9 +26,8 @@ Route::get('/groups', function () {
 });
 
 
-//API
+//Rent api
 Route::resource("/rent", RentController::class);
+
+//Car api
 Route::resource("/car", CarController::class);
-Route::resource("/group", GroupController::class);
-Route::resource("/track", TrackController::class);
-Route::resource("/track-day", TrackDayController::class);

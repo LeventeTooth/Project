@@ -68,6 +68,7 @@ class AuthController extends Controller
             'address' => 'nullable|string|max:255',
             'birth_date' => 'required|date',
             'age' => 'required|integer|min:0',
+            'group_id' => 'required|exists:groups,id',
         ]);
 
         $validate['password'] = Hash::make($validate['password']);
@@ -87,49 +88,47 @@ class AuthController extends Controller
         //
     }
 
-    public function edit($id)
+
+    public function edit(string $id)
     {
-
-        $user = User::findOrFail($id);
-
-
+        $user = User::find($id);
         $groups = Group::all();
-
-
-        return view('datamodification', ['user' => $user, 'groups' => $groups]);
+        return view('datamodification', ['groups' => $groups, 'user' => $user]);
     }
 
-    public function update(Request $request, $id)
+
+    public function update(Request $request, string $id)
     {
         $user = User::findOrFail($id);
-
-
+    
         $request->validate([
-            'name' => 'required|string|max:255',
-            'username' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
+            'name' => 'required|string',
+            'username' => 'required|string',
+            'email' => 'required|email|max:255|unique:users,email,' . $user->id,
             'address' => 'nullable|string|max:255',
-            'birth_date' => 'required|date',
-            'age' => 'required|integer|min:0',
-            'group_id' => 'nullable|integer|exists:groups,id'
+            'birth_date' => 'nullable|date',
+            'age' => 'nullable|integer',
+            'group_id' => 'nullable|exists:groups,id',
         ]);
-
-
-        $user->update($request->only([
-            'name',
-            'username',
-            'email',
-            'address',
-            'birth_date',
-            'age',
-            'group_id'
-        ]));
-
-
-        return redirect()->route('auth.account')->with('success', 'Adatok sikeresen frissítve.');
+    
+        // Logoljuk a változások előtt
+        \Log::info('Before Update: ', $user->toArray());
+    
+        $user->update([
+            'name' => $request->input('name'),
+            'username' => $request->input('username'),
+            'email' => $request->input('email'),
+            'address' => $request->input('address'),
+            'birth_date' => $request->input('birth_date'),
+            'age' => $request->input('age'),
+            'group_id' => $request->input('group_id'),
+        ]);
+    
+        // Logoljuk a változások után
+        \Log::info('After Update: ', $user->toArray());
+    
+        return redirect()->route('main');
     }
-    
-    
     
 
 
