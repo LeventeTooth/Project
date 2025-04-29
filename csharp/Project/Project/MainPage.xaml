@@ -15,9 +15,11 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+
         <Border Padding="2" BackgroundColor="#3B2E58" >
             <HorizontalStackLayout Grid.Row="0" Grid.Column="0">
                 <VerticalStackLayout  >
+                    <Label Text="Auth"/>
                     <Entry Text="{Binding UserEmail}" 
                Placeholder="Enter Email" WidthRequest="143"
                HorizontalOptions="Fill" VerticalOptions="Fill" Margin="1"/>
@@ -28,6 +30,16 @@
                 HorizontalOptions="Start" Padding="1,1,1,1" Command="{Binding runCommand}" Margin="5,1,1,1"/>
             </HorizontalStackLayout>
         </Border>
+        
+        
+        <Border Padding="2">
+            <HorizontalStackLayout  Grid.Row="1" Grid.Column="0">
+                <Label Text="New Rent"/>
+                
+            </HorizontalStackLayout>
+        </Border>
+        
+        
     </Grid>
 
 </ContentPage>
