@@ -27,9 +27,8 @@ class AuthController extends Controller
 
     public function account()
     {
-        $userId = Auth::id();
-        $user = User::find($userId);
-        return view('auth.account', ['user' => $user]);
+        return view('auth.account', ['user' => Auth::user()]);
+
     }
 
     public function login(Request $request)
@@ -97,7 +96,7 @@ class AuthController extends Controller
         $groups = Group::all();
 
         // A datamodification.blade.php-hez a szükséges adatok átadása
-        return view('datamodification', ['user' => $user, 'groups' => $groups]);
+        return view('auth.datamodification', ['user' => $user, 'groups' => $groups]);
     }
 
     public function update(Request $request, $id)

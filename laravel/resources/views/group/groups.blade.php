@@ -19,16 +19,20 @@
             <ul class="bg-gray-50 divide-y divide-gray-200 border border-gray-300 rounded-md w-[40%] text-center">
                 @foreach ($groups as $group)
                     <li class="px-4 py-2 hover:bg-gray-300 flex justify-between">
-                    <p>{{ $group->title }}</p>
+                        <p class="flex items-center justify-center">{{ $group->title }}</p>
+                        @auth
+    @if(auth()->user()->group_id === $group->id && $group->title !== 'Nincs')
+        <form action="{{ route('groups.destroy', $group->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded-md">
+                Törlés
+            </button>
+        </form>
+    @endif
+@endauth
 
 
-                        <form action="{{ route('groups.destroy', $group->id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded-md">
-                                Törlés
-                            </button>
-                        </form>
                     </li>
                 @endforeach
             </ul>
@@ -50,18 +54,22 @@
                 @foreach ($groups as $group)
                     <li class="px-4 py-2 hover:bg-gray-300 flex justify-between items-center">
                     <li class="px-4 py-2 hover:bg-gray-300 flex justify-between">
-                    <p>{{ $group->title }}</p>
+                        <p>{{ $group->title }}</p>
 
 
-                        <form action="{{ route('groups.destroy', $group->id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded-md">
-                                Törlés
-                            </button>
-                        </form>
+                        @auth
+    @if(auth()->user()->group_id === $group->id && $group->title !== 'Nincs')
+        <form action="{{ route('groups.destroy', $group->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded-md">
+                Törlés
+            </button>
+        </form>
+    @endif
+@endauth
                     </li>
-                        </form>
+                    </form>
                     </li>
                 @endforeach
             </ul>

@@ -71,7 +71,16 @@ class GroupController extends Controller
      */
     public function destroy($id)
     {
-        $group = Group::findOrFail($id); // vagy: Group::where('id', $id)->firstOrFail();
+        $group = Group::findOrFail($id);
+
+        $user = auth()->user();
+
+        if ($group->title === 'Nincs') {
+            return redirect()->route('groups.index')->with('error', 'A "Nincs" nevű csapat nem törölhető.');
+        }
+        if ($user->group_id !== $group->id) {
+            abort(403, 'Nincs jogosultságod törölni ezt a csapatot.');
+        }
         $group->delete();
     
         return redirect()->route('groups.index')->with('success', 'Sikeres törlés');
