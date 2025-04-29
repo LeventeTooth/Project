@@ -77,12 +77,7 @@ class RentController extends Controller
             return response()->json($data,404);
         } 
         else{
-            $data = [
-                'status' => 200,
-                'rent' => $foundRent
-            ];
-
-            return response()->json($data,200);
+            return response()->json($foundRent,200);
         }
     }
 
