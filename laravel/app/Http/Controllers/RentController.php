@@ -21,7 +21,11 @@ class RentController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Event $event, Car $car)
+    public function create()
+    {
+        //
+    }
+    public function createRent(Event $event, Car $car)
     {
         return view('rent.createRent', ['event'=>$event, 'car'=>$car]);
     }
