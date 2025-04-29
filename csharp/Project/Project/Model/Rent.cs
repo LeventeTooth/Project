@@ -13,7 +13,7 @@ namespace Project.Model
 
         public int Car_id { get; set; }
         public string Rent_time { get; set; }
-        public int Track_day { get; set; }
+        public int Event_id { get; set; }
 
         public string? Created_at { get; set; }
         public string? Updated_at { get; set; }

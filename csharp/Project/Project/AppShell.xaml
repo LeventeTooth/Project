@@ -20,12 +20,12 @@
         ContentTemplate="{DataTemplate local:TracksPage}"
         Route="TracksPage"/>
     <ShellContent
-        Title="Manage Rents"
+        Title="View Rents"
         ContentTemplate="{DataTemplate local:RentsPage}"
         Route="RentsPage"/>
     <ShellContent
-    Title="Manage TrackDays"
-    ContentTemplate="{DataTemplate local:TrackDaysPage}"
-    Route="TrackDaysPage"/>
+    Title="Manage Events"
+    ContentTemplate="{DataTemplate local:EventsPage}"
+    Route="EventsPage"/>
 
 </Shell>

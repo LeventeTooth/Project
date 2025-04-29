@@ -65,13 +65,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="EventsPage.xaml.cs">
+	    <DependentUpon>EventsPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="CarsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="RentsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="TrackDaysPage.xaml">
+	  <MauiXaml Update="EventsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="TracksPage.xaml">

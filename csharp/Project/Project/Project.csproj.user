@@ -16,7 +16,7 @@
     <MauiXaml Update="RentsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="TrackDaysPage.xaml">
+    <MauiXaml Update="EventsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="TracksPage.xaml">

@@ -13,6 +13,7 @@ namespace Project.Model
         public string Model { get; set; }
         public int Price { get; set; }
         public string Power { get; set; }
+        public string Img { get; set; }
         public string? Created_at { get; set; }
         public string? Updated_at { get; set; }
         public string? Deleted_at { get; set; }

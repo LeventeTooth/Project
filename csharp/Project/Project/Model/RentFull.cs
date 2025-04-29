@@ -15,7 +15,7 @@ namespace Project.Model
         public Track Track { get; set; }
         public Car Car { get; set; }
         public string Rent_time { get; set; }
-        public TrackDay TrackDay { get; set; }
+        public Event Event { get; set; }
 
 
         public string UserEmail { get { return User.Email; } }

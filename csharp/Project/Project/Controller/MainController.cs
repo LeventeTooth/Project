@@ -60,7 +60,7 @@ namespace Project.Controller
         [RelayCommand]
         async void toTrackDays()
         {
-            await Shell.Current.GoToAsync("///TrackDaysPage");
+            await Shell.Current.GoToAsync("///EventsPage");
         }
 
         public MainController()
