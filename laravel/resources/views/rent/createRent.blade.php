@@ -6,7 +6,7 @@
 
     <div class="flex flex-wrap justify-center pt-10 mb-20">
         <div class="mt-10 p-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm w-10/12">
-            <h5 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 text-center mb-10">Foglalás</h5>
+            <h5 class="mb-5 text-4xl font-bold tracking-tight text-gray-900 text-center mb-10">Foglalás</h5>
             <form class="max-w-sm mx-auto" method="POST" action="{{ route('rents.store') }}">
                 @csrf
                 <!-- Hidden inputs -->
@@ -15,14 +15,14 @@
                 <input type="hidden" name="user_id" value="{{ $event->id }}">
                 <!-- Event name -->
                 <div class="mb-5">
-                    <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Event name</label>
+                    <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Esemény</label>
                     <input type="text" id="eventName"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         value="{{ $event->name }}" readonly />
                 </div>
                 <!-- Car -->
                 <div class="mb-5">
-                    <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Car</label>
+                    <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Választott autó</label>
                     <input type="text" id="car"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                         value="{{ $car->model }}" readonly />
