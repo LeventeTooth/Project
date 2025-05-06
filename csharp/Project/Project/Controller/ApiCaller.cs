@@ -28,7 +28,15 @@ namespace Project.Controller
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Get, $"{url}{path}");
             var response = await client.SendAsync(request);
-            response.EnsureSuccessStatusCode();
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (Exception ex) {
+                await Shell.Current.DisplayAlert("Error", "An error has occured during the connection to the server", "Ok");
+                toMain();
+                return default;
+            }
             return JsonSerializer.Deserialize<List<T>>(await response.Content.ReadAsStringAsync(), opt);
         }
 
@@ -38,7 +46,17 @@ namespace Project.Controller
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Get, $"{url}{path}/{id}");
             var response = await client.SendAsync(request);
-            response.EnsureSuccessStatusCode();
+
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", "An error has occured during the connection to the server", "Ok");
+                toMain();
+                return default;
+            }
             return JsonSerializer.Deserialize<T>(await response.Content.ReadAsStringAsync(), opt);
         }
 
@@ -50,7 +68,16 @@ namespace Project.Controller
             var content = new FormUrlEncodedContent(collection);
             request.Content = content;
             var response = await client.SendAsync(request);
-            response.EnsureSuccessStatusCode();
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", "An error has occured during the connection to the server", "Ok");
+                toMain();
+                return default;
+            }
             return JsonSerializer.Deserialize<Response>(await response.Content.ReadAsStringAsync(), opt);
 
         }
@@ -63,7 +90,16 @@ namespace Project.Controller
             var content = new FormUrlEncodedContent(collection);
             request.Content = content;
             var response = await client.SendAsync(request);
-            response.EnsureSuccessStatusCode();
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", "An error has occured during the connection to the server", "Ok");
+                toMain();
+                return default;
+            }
             return JsonSerializer.Deserialize<Response>(await response.Content.ReadAsStringAsync(), opt);
 
 
@@ -74,9 +110,23 @@ namespace Project.Controller
             var client = new HttpClient();
             var request = new HttpRequestMessage(HttpMethod.Delete, $"{url}{path}/{id}");
             var response = await client.SendAsync(request);
-            response.EnsureSuccessStatusCode();
+            try
+            {
+                response.EnsureSuccessStatusCode();
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Error", "An error has occured during the connection to the server", "Ok");
+                toMain();
+                return default;
+            }
             return JsonSerializer.Deserialize<Response>(await response.Content.ReadAsStringAsync(), opt);
 
+        }
+
+        private async void toMain()
+        {
+            await Shell.Current.GoToAsync("///MainPage");
         }
 
 
