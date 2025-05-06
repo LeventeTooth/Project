@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\eventspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\eventspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\controller\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\controller\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|c:\\users\\kispr\\onedrive\\developer\\workplace\\project\\project\\csharp\\project\\project\\controller\\apicaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5022AC0C-AB99-4091-838B-3F760F4B980D}|Project\\Project.csproj|solutionrelative:project\\controller\\apicaller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,27 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EventsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\EventsPage.xaml",
-              "RelativeDocumentMoniker": "Project\\EventsPage.xaml",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\EventsPage.xaml",
-              "RelativeToolTip": "Project\\EventsPage.xaml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAUwBoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-29T21:43:37.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventsController.cs",
-              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\EventsController.cs",
-              "RelativeDocumentMoniker": "Project\\Controller\\EventsController.cs",
-              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\EventsController.cs",
-              "RelativeToolTip": "Project\\Controller\\EventsController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAUwDsAAABMAAAAAAAAAA==",
+              "Title": "ApiCaller.cs",
+              "DocumentMoniker": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\ApiCaller.cs",
+              "RelativeDocumentMoniker": "Project\\Controller\\ApiCaller.cs",
+              "ToolTip": "C:\\Users\\kispr\\OneDrive\\developer\\WORKPLACE\\Project\\Project\\csharp\\Project\\Project\\Controller\\ApiCaller.cs",
+              "RelativeToolTip": "Project\\Controller\\ApiCaller.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T21:43:24.199Z",
+              "WhenOpened": "2025-05-06T08:20:05.319Z",
               "EditorCaption": ""
             }
           ]
