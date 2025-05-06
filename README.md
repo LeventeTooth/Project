@@ -1,5 +1,5 @@
 Asztali alkalmazas: /csharp/project/Project.sln
-Asztali alkalmazas telepito fajl: //Andris Ird majd bele, meg ha akarod ekezesitsd ezt meg 
+Asztali alkalmazas telepito fajl: /DesktopInstaller/Installer.msix
 Webes felulet (Laravel): /laravel
 Dokumentacio: /Documentacion.txt
 Adatbazis modell diagarm: /Database_Plan.png
