@@ -19,4 +19,8 @@ class Car extends Model
         'power',
         'img'
     ];
+
+    public function HasAvailableTimeForRent(){
+        //TODOO
+    }
 }
