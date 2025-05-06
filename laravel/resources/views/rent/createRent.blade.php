@@ -7,12 +7,12 @@
     <div class="flex flex-wrap justify-center pt-10 mb-20">
         <div class="mt-10 p-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm w-10/12">
             <h5 class="mb-5 text-4xl font-bold tracking-tight text-gray-900 text-center mb-10">Foglalás</h5>
-            <form class="max-w-sm mx-auto" method="POST" action="{{ route('rents.store') }}">
+            <form id="rent_form" class="max-w-sm mx-auto" method="POST" action="{{ route('rents.store') }}">
                 @csrf
                 <!-- Hidden inputs -->
                 <input type="hidden" name="car_id" value="{{ $car->id }}">
                 <input type="hidden" name="event_id" value="{{ $event->id }}">
-                <input type="hidden" name="user_id" value="{{ $event->id }}">
+                <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
                 <!-- Event name -->
                 <div class="mb-5">
                     <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Esemény</label>
@@ -29,10 +29,10 @@
                 </div>
                 <!-- Rent time -->
                 <div class="mb-10">
-                        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Válaszd ki az időpontot</label>
-                        <select name="rent_time" id="countries"
+                        <label for="rent_time" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Válaszd ki az időpontot</label>
+                        <select name="rent_time" id="rent_time"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
-                            <option selected>Válassz időpontot</option>
+                            <option selected value="Válassz időpontot">Válassz időpontot</option>
                             <option value="10:00">10:00</option>
                             <option value="10:30">10:30</option>
                             <option value="11:00">11:00</option>
@@ -56,5 +56,27 @@
             </form>
         </div>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('rent_form');
+        const select = document.getElementById('rent_time');
+
+        form.addEventListener('submit', function (e) {
+            if (select.value === "" || select.value === "Válassz időpontot") {
+                e.preventDefault();
+                select.classList.add('border-red-500');
+                select.classList.remove('border-gray-300');
+            }
+        });
+
+        select.addEventListener('change', function () {
+            if (select.selectedIndex !== 0) {
+                select.classList.remove('border-red-500');
+                select.classList.add('border-gray-300');
+            }
+        });
+    });
+</script>
 
 @endsection

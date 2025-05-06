@@ -41,7 +41,7 @@ class RentController extends Controller
         [
             'user_id' => 'required|integer',
             'car_id' => 'required|integer',
-            'rent_time' => 'required|string',
+            'rent_time' => 'required|in:10:00,10:30,11:00,11:30,12:00,14:00,14:30,15:00,15:30,16:00',
             'event_id' => 'required|integer'
         ]);
         
