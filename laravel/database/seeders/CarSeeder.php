@@ -28,8 +28,8 @@ class CarSeeder extends Seeder
             'img'=>'https://preview.redd.it/vvdtfobbl1y61.jpg?width=1080&crop=smart&auto=webp&s=d3e7fb14979ca54132d442ecd8997437f3e17767'
         ]);
         Car::create([
-            'license_plate'=>'Epitett',
-            'model'=>'Nismo ',
+            'license_plate'=>'Épített',
+            'model'=>'Nissan GT-R Nismo',
             'price'=>100000,
             'power'=>'550le / 800nm',
             'img'=>'https://www.topgear.com/sites/default/files/news-listicle/image/1_80.jpg'

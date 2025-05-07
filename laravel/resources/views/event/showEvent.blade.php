@@ -4,15 +4,26 @@
 
 @section('content')
 
-    <div class="show-event-item">
-        <h3 class="text-3xl">{{ $event->date }}</h3>
-        <h1 class="text-5xl">{{ $event->name }}</h1>
-        <h4 class="mt-8">Napijegy: {{ $event->track->price }} Ft</h4>
-        <h4 class="mt-3">Pálya: {{ $event->track->name }}</h4>
-        <h4 class="mt-3">Helyszín: {{ $event->track->location }}</h4>
+    <div class="bg-black/60 show-event-item flex flex-wrap justify-center ">
+        <table>
+            <tr>
+                <td class="">
+                    <img class="rounded-lg h-[330px] object-cover w-[600px]" src="{{ asset($event->img) }}" alt="" />
+                </td>
+                <td class="w-[50px]"></td>
+                <td class="">
+                    <h3 class="text-2xl">{{ $event->date }}</h3>
+                    <h1 class="text-5xl">{{ $event->name }}</h1>
+                    <h4 class="mt-8">Napijegy: {{ $event->track->price }} Ft</h4>
+                    <h4 class="mt-3">Pálya: {{ $event->track->name }}</h4>
+                    <h4 class="mt-3">Helyszín: {{ $event->track->location }}</h4>
+                </td>
+            </tr>
+        </table>
+
     </div>
 
-    <div class="show-event-item">
+    <div class="show-event-item text-center bg-black/45">
         <h1 class="text-5xl mt-10">Válassz autót a foglaláshoz!</h1>
         <div class="mt-5 pt-5 flex flex-wrap justify-center">
             @foreach ($cars as $car)

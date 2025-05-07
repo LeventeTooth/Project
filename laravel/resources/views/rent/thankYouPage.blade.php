@@ -4,11 +4,11 @@
 
 @section('content')
 
-    <div class="show-event-item">
+    <div class="item-bg">
         <h1 class="text-5xl mt-10">Köszönjük foglalásod!</h1>
         <h1 class="text-4xl mt-10">A pályán találkozunk!</h1>
     </div>
-    <div class="show-event-item ">
+    <div class="item-bg">
         <h1 class="text-3xl mt-10">Összefoglaló a foglalásodról</h1>
         <div class="flex flex-wrap justify-center mt-10">
 

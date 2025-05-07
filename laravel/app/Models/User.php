@@ -58,5 +58,20 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Group::class);
     }
+
+    public function HasReservation()
+    {
+        $rents = Rent::all();
+        $index = 0;
+        while($index < count($rents) && $rents[$index]->user_id == $this->id){
+            $index++;
+        }
+        if($index < count($rents)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     
 }

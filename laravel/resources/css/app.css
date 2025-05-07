@@ -18,7 +18,10 @@
     @apply text-center text-white bg-black/45 mt-10 p-3
 }
 
+.item-bg{
+    @apply p-10 text-center text-white bg-black/45 mt-20
+}
 
 .show-event-item{
-    @apply p-10 text-center text-white bg-black/45 mt-20
+    @apply p-10 text-white mt-20
 }

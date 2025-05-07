@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="show-event-item">
+    <div class="item-bg">
         <h1 class="text-5xl mt-10">Autóink</h1>
         <div class="mt-5 pt-5 flex flex-wrap justify-center">
             @foreach ($cars as $car)

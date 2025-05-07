@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Car extends Model
 {
@@ -19,6 +20,10 @@ class Car extends Model
         'power',
         'img'
     ];
+
+    public function rent() : HasMany {
+        return $this->hasMany(Rent::class);
+    }
 
     public function HasAvailableTimeForRent($event_id){
         $rents = Rent::all();

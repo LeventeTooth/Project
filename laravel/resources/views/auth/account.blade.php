@@ -3,9 +3,10 @@
 @section('title', 'Profilom')
 
 @section('content')
-    <div class="max-w-lg mx-auto">
-        <div class="bg-white shadow-md rounded-lg overflow-hidden mt-8">
-            <table class="w-full">
+    <div class="max-w-[600px] mx-auto">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden mt-8 max-w-[500px] mx-auto">
+            <h1 class="text-2xl px-5 py-5 text-center font-semibold">Profiladatok</h1>
+            <table class="w-full border-t">
                 <tr class="border-b">
                     <td class="px-4 py-2 font-semibold text-gray-700">ID</td>
                     <td class="px-4 py-2">{{ $user->id }}</td>
@@ -44,9 +45,8 @@
                     <td class="px-4 py-2">{{ $user->created_at->format('Y-m-d') }}</td>
                 </tr>
             </table>
-            </form>
         </div>
-        <div class="flex justify-between  space-x-4 mt-3">
+        <div class="flex justify-between  space-x-4 mt-3 max-w-[500px] mx-auto">
             <a href="{{ route('auth.edit', $user->id) }}"
                 class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md">
                 Adatmódosítás
@@ -65,6 +65,27 @@
                 </button>
             </form>
         </div>
+        @if ($user->HasReservation())
+            <div class="bg-white shadow-md rounded-lg overflow-hidden my-10">
+                <h1 class="text-2xl px-5 py-5 text-center font-semibold">Foglalások</h1>
+                <table class="w-full p-5 border-t">
+                    <tr class="border-b text-left">
+                        <th class="px-4 py-2">Esemény</th>
+                        <th class="px-4 py-2">Választott autó</th>
+                        <th class="px-4 py-2">Ár</th>
+                        <th class="px-4 py-2">Időpont</th>
+                    </tr>
+                    @foreach ($rents as $rent)
+                        <tr class="border-b">
+                            <td class="px-4 py-2 hover:text-blue-600"><a href="{{ route('events.show', $rent->event->id) }}">{{ $rent->event->name }}</a></td>
+                            <td class="px-4 py-2">{{ $rent->car->model }}</td>
+                            <td class="px-4 py-2">{{ $rent->car->price + $rent->event->track->price }} Ft</td>
+                            <td class="px-4 py-2">{{ $rent->rent_time }}</td>
+                        </tr>
+                    @endforeach
+                </table>
+            </div>
+        @endif
     </div>
 
 @endsection

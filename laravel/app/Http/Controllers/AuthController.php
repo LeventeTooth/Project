@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Group;
 use App\Models\User;
+use App\Models\Rent;
 use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -27,7 +28,11 @@ class AuthController extends Controller
 
     public function account()
     {
-        return view('auth.account', ['user' => Auth::user()]);
+        $rents = [];
+        foreach(Rent::all() as $rent){
+            if($rent->user_id == Auth::user()->id) array_push($rents, $rent);
+        }
+        return view('auth.account', ['user' => Auth::user(), 'rents' => $rents]);
 
     }
 
