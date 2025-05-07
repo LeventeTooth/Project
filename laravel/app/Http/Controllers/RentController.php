@@ -29,7 +29,8 @@ class RentController extends Controller
     }
     public function createRent(Event $event, Car $car)
     {
-        return view('rent.createRent', ['event'=>$event, 'car'=>$car]);
+        $rent_times = ['10:00','10:30','11:00','11:30','12:00','14:00','14:30','15:00','15:30','16:00'];
+        return view('rent.createRent', ['event'=>$event, 'car'=>$car, 'rent_times'=>$rent_times]);
     }
 
     /**

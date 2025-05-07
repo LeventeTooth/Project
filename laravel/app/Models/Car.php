@@ -20,7 +20,29 @@ class Car extends Model
         'img'
     ];
 
-    public function HasAvailableTimeForRent(){
-        //TODOO
+    public function HasAvailableTimeForRent($event_id){
+        $rents = Rent::all();
+        $reserved_times = [];
+        foreach($rents as $rent){
+            if($rent->event_id == $event_id && $rent->car_id == $this->id){
+                array_push($reserved_times, $rent->rent_time);
+            }
+        }
+        if(count($reserved_times) == 10){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    public function IsRentTimeFree($event_id, $rent_time){
+        $rents = Rent::all();
+        foreach($rents as $rent){
+            if($rent->event_id == $event_id && $rent->car_id == $this->id && $rent->rent_time == $rent_time){
+                return false;
+            }
+        }
+        return true;
     }
 }

@@ -33,16 +33,11 @@
                         <select name="rent_time" id="rent_time"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ">
                             <option selected value="Válassz időpontot">Válassz időpontot</option>
-                            <option value="10:00">10:00</option>
-                            <option value="10:30">10:30</option>
-                            <option value="11:00">11:00</option>
-                            <option value="11:30">11:30</option>
-                            <option value="12:00">12:00</option>
-                            <option value="14:00">14:00</option>
-                            <option value="14:30">14:30</option>
-                            <option value="15:00">15:00</option>
-                            <option value="15:30">15:30</option>
-                            <option value="16:00">16:00</option>
+                            @foreach ($rent_times as $time)
+                                @if ($car->IsRentTimeFree($event->id, $time))
+                                    <option value="{{ $time }}">{{ $time }}</option>
+                                @endif
+                            @endforeach
                         </select>
                 </div>
                 <!-- Price calculate -->
