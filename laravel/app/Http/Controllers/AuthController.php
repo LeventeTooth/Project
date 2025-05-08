@@ -8,6 +8,7 @@ use App\Models\Rent;
 use Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Session;
 use Symfony\Contracts\Service\Attribute\Required;
 
 class AuthController extends Controller
@@ -42,18 +43,26 @@ class AuthController extends Controller
             'username' => 'required',
             'password' => 'required'
         ]);
-
+    
         $user = User::where('username', $request->username)->first();
-
+    
         if ($user && Hash::check($request->password, $user->password)) {
             Auth::login($user);
-            return redirect()->route('main', ['loggedin' => 'true']);
+    
+            // Irányítás az előző oldalra, ha van ilyen mentve
+            $redirectUrl = session('elozo_url', route('main', ['loggedin' => 'true']));
+    
+            // Töröljük az előző URL-t a session-ből, ha nem akarod újra használni
+            Session::forget('elozo_url');
+    
+            return redirect()->to($redirectUrl);
         }
-
+    
         return back()->withErrors([
             'login' => 'Hibás felhasználónév vagy jelszó.'
         ])->withInput();
     }
+    
 
     public function create()
     {
