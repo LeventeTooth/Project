@@ -16,7 +16,7 @@ namespace Project.Model
         public string Address { get; set; }
         public DateTime Birth_date { get; set; }
         public int Age { get; set; }
-        public int Group_id { get; set; }
+        public int? Group_id { get; set; }
         public string? Created_at { get; set; }
         public string? Updated_at { get; set; }
         public string? Deleted_at { get; set; }
