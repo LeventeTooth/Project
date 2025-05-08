@@ -64,7 +64,7 @@
                         @else
 
                             <div
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white text-gray-800 bg-gray-300 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-gray-800 bg-gray-300 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
                                 Minden időpont foglalt
                             </div>
 
