@@ -6,7 +6,7 @@
 
     <div class="flex flex-wrap justify-center mt-20 pt-10">
         @foreach ($events as $event)
-            <div class="p-5 mx-6 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm">
+            <div class="p-5 mx-6 max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm mt-8">
                 <a href="#">
                     <img class="rounded-lg object-cover h-[230px] w-[400px]" src="{{ $event->img }}" alt="" />
                 </a>

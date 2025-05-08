@@ -16,6 +16,11 @@
             <!-- first black div -->
             <div class="p-1 bg-black/45">
                 <div class="flex justify-end space-x-4 p-2">
+                    @php
+                        if (request()->url() !== url('/auth')) {
+                            Session::put('elozo_url', URL::full());
+                        }
+                    @endphp
                     <a href="{{ Auth::check() ? route('auth.account') : route('auth.index') }}"
                         class="bg-stone-700 text-stone-300 text-l px-4 py-2 font-semibold rounded border-2 border-stone-300  hover:bg-stone-300 hover:text-stone-700 hover:border-stone-700 transition duration-1000">
                         @if (Auth::check())
@@ -28,12 +33,13 @@
                             class="bg-green-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-green-600 hover:border-stone-400 transition duration-700">Regisztráció</a>
                     @endguest
                     @auth
-                    <form method="POST" action="{{ route('auth.logout') }}" class="inline">
-                @csrf
-                <button type="submit" class="bg-red-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-red-600 hover:border-stone-400 transition duration-700">
-                    Kijelentkezés
-                </button>
-            </form>
+                        <form method="POST" action="{{ route('auth.logout') }}" class="inline">
+                            @csrf
+                            <button type="submit"
+                                class="bg-red-500 text-white px-4 py-2 border-2 border-white font-semibold rounded hover:bg-red-600 hover:border-stone-400 transition duration-700">
+                                Kijelentkezés
+                            </button>
+                        </form>
                     @endauth
 
                 </div>
