@@ -6,28 +6,28 @@
 A projektünk egy autóbérlési és versenypálya-kezelési rendszer, amelynek célja, hogy felhasználóbarát weboldalt és asztali alkalmazást biztosítson a felhasználók számára. A projekt két fő komponensből áll:
 
 Laravel Weboldal: Az online felhasználók számára lehetővé teszi a pályák és autók foglalását.
-MAUI Asztali Alkalmazás: Helyi, asztali környezetben támogatja a felhasználókat ugyanazon funkciók elérésében.
+MAUI Asztali Alkalmazás: Adminisztációs felületett biztosít az autók, pályák, események kezelésére
 Mindkét rendszer egy közös REST API-t használ, amely az adatokat egy központi adatbázisból szolgáltatja.
 
 ## Használt rendszerek
 
-## Laravel:
+### Laravel:
 
-### Funkciók:
+#### Funkciók:
 
 * Felhasználói regisztráció és bejelentkezés
 * Versenypálya foglalás
 * Autók bérlése
 * Webes felület az autók és pálya kezelésére
 
-## MAUI Asztali Alkalmazás:
+### MAUI Asztali Alkalmazás:
 
-### Funkciók:
+#### Funkciók:
 
-* Az API-n keresztül elérhető bejelentkezés és foglalás
-* Versenypálya foglalás
-* Autók bérlése
-* Asztali felület az autók és pálya kezelésére
+* Az API-n keresztül:
+* Versenypályák felvétele, modósítása, törlése
+* Autók felvétele, modósítása, törlése
+* Események felvétele, modósítása, törlése
 
 ## REST API:
 
@@ -52,8 +52,19 @@ Mindkét rendszer egy közös REST API-t használ, amely az adatokat egy közpon
 
 * Github link: https://github.com/LeventeTooth/Project.git
 
-#### SQL tervezés
 
-* az adatbázis megtervezése
-  =======
 
+#### Az adatbázis megtervezése:
+----
+
+Az adatbázis tervezéséhez a `drawsql.app` nevű oldalt használtuk. Tervezéskor figyelembe vettünk rengeteg szmepontot, hogy milyen adatokra lesz szükségünk az ötleteink megvalósításához, mikre lehet szükség.
+
+#### C# MAUI alkalmazás:
+
+Az asztali (windows) felhasználásra tervezett programot a Mincrosoft .NET keretrendszerében; .NET MAUI- ban készítettük el. A MAUI lehetőséget biztosít, hogy letisztultan, átláthatóan tudnjunk MVVM `(Model View ViewModel)`struktúrával dolgozni.
+* A `Model` az adatok szerkezerte 
+* A `View` a felhasználó által látható kezelőfelület
+* A `ViewModel` az pedig az az egység ami az elöző két részt összeköti
+
+A három rész eggyüt alkott egy egész programot. 
+Töreketünk a különálló részek szeparálására.
