@@ -1,4 +1,3 @@
-
 # Tóth Levente Bálint, Pácz Barnabás, Prukner András
 
 ## Projekt:
@@ -52,19 +51,18 @@ Mindkét rendszer egy közös REST API-t használ, amely az adatokat egy közpon
 
 * Github link: https://github.com/LeventeTooth/Project.git
 
-
-
 #### Az adatbázis megtervezése:
-----
+
+---
 
 Az adatbázis tervezéséhez a `drawsql.app` nevű oldalt használtuk. Tervezéskor figyelembe vettünk rengeteg szmepontot, hogy milyen adatokra lesz szükségünk az ötleteink megvalósításához, mikre lehet szükség.
 
 #### C# MAUI alkalmazás:
 
 Az asztali (windows) felhasználásra tervezett programot a Mincrosoft .NET keretrendszerében; .NET MAUI- ban készítettük el. A MAUI lehetőséget biztosít, hogy letisztultan, átláthatóan tudnjunk MVVM `(Model View ViewModel)`struktúrával dolgozni.
-* A `Model` az adatok szerkezerte 
+
+* A `Model` az adatok szerkezerte
 * A `View` a felhasználó által látható kezelőfelület
 * A `ViewModel` az pedig az az egység ami az elöző két részt összeköti
 
-A három rész eggyüt alkott egy egész programot. 
-Töreketünk a különálló részek szeparálására.
+A három rész eggyüt alkott egy egész programot.
