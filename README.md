@@ -4,4 +4,4 @@ Webes felulet (Laravel): /laravel
 Dokumentacio: /Documentacion.md
 Adatbazis modell diagarm: /Database_Plan.png
 Adatbazis export: /kralkatrack.sql
-Pacz Barnabas, Prukner Andras, Toth Levente balint
+Pácz Barnabás, Prukner András, Tóth Levente Bálint
