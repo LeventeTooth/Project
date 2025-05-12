@@ -33,7 +33,7 @@ namespace Project.Controller
                 response.EnsureSuccessStatusCode();
             }
             catch (Exception ex) {
-                await Shell.Current.DisplayAlert("Error", "An error has occured during the connection to the server", "Ok");
+                await Shell.Current.DisplayAlert("Error", $"An error has occured during the connection to the server\n{ex.Message}", "Ok");
                 toMain();
                 return default;
             }
@@ -53,7 +53,7 @@ namespace Project.Controller
             }
             catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("Error", "An error has occured during the connection to the server", "Ok");
+                await Shell.Current.DisplayAlert("Error", $"An error has occured during the connection to the server\n{ex.Message}", "Ok");
                 toMain();
                 return default;
             }
@@ -74,7 +74,7 @@ namespace Project.Controller
             }
             catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("Error", "An error has occured during the connection to the server", "Ok");
+                await Shell.Current.DisplayAlert("Error", $"An error has occured during the connection to the server\n{ex.Message}", "Ok");
                 toMain();
                 return default;
             }
@@ -96,7 +96,7 @@ namespace Project.Controller
             }
             catch (Exception ex)
             {
-                await Shell.Current.DisplayAlert("Error", "An error has occured during the connection to the server", "Ok");
+                await Shell.Current.DisplayAlert("Error", $"An error has occured during the connection to the server\n{ex.Message}", "Ok");
                 toMain();
                 return default;
             }
