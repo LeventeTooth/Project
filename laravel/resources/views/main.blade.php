@@ -6,18 +6,62 @@
 
     <div class="item">
         <h3 class="text-3xl">Következő esemény:</h3>
-        <h1 class="text-5xl">Králka Szezonindító: 04.05</h1>
+        <h1 class="text-5xl mb-10">Králka Summer Festival: 06.21</h1>
+        <a href="{{ route('events.show', 1) }}"
+                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-white rounded-lg hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        Megnézem
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
     </div>
 
     <div class="item">
-        <a class="text-5xl">Jegyek: 6000Ft/auto-tól</a>
+        <a class="text-5xl mb-10">Már 4 autó közül válaszhatsz!</a><br>
+        <a href="{{ route('cars.index') }}"
+                        class="mt-10 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-white rounded-lg hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        Megnézem
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+    </div>
+
+    <div class="item">
+        <a class="text-5xl mb-10">Mostantól 3 pályán is rendezünk eseményeket!</a><br>
+        <a href="{{ route('tracks.index') }}"
+                        class="mt-10 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-white rounded-lg hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        Megnézem
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
+    </div>
+
+    <div class="item">
+        <a class="text-5xl mb-10">Tekints meg galériánkat!</a><br>
+        <a href="/pictures"
+                        class="mt-10 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-white rounded-lg hover:bg-black hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300">
+                        Galéria
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 14 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                    </a>
     </div>
 
     <div class="hidden md:block">
         <div class="item">
             <div class="card">
                 <div class="p-20 pt-10 pb-10">
-                    <h1 class="text-3xl">A PÁLYÁRÓL:</h1>
+                    <h1 class="text-3xl">A KRÁLKA GARAGERŐL:</h1>
                     <br>
                     <p style="font-size: large;">
                     A Králkai Drift Pálya egy sokoldalúan kialakított drift- és szórakoztató motorsport-komplexum, amely ideális választás mind a kezdő, mind a tapasztalt pilóták számára. A pálya vonalvezetése különféle kihívásokat rejt: technikás kanyarok, lendületes ívek és széles manőverezési lehetőségek biztosítják az élményt.
